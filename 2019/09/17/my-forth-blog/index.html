@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Hexo</title>
+  <title>git命令提交代码 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="git命令提交代码的两种情况a）直接切到远程分支开发，例如master1、提交代码前，首先通过 git status 命令查看修改了哪些文件 2、两种git add方法，一般都是直接git add .  * git add . 添加所有修改文件 * git add 文件路径 添加自己想要push的文件，适用于提交部分代码3、git commit -m ‘description’ 4、git pul">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git命令提交代码">
+<meta property="og:url" content="http://yoursite.com/2019/09/17/my-forth-blog/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="git命令提交代码的两种情况a）直接切到远程分支开发，例如master1、提交代码前，首先通过 git status 命令查看修改了哪些文件 2、两种git add方法，一般都是直接git add .  * git add . 添加所有修改文件 * git add 文件路径 添加自己想要push的文件，适用于提交部分代码3、git commit -m ‘description’ 4、git pul">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-17T09:31:21.830Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="git命令提交代码">
+<meta name="twitter:description" content="git命令提交代码的两种情况a）直接切到远程分支开发，例如master1、提交代码前，首先通过 git status 命令查看修改了哪些文件 2、两种git add方法，一般都是直接git add .  * git add . 添加所有修改文件 * git add 文件路径 添加自己想要push的文件，适用于提交部分代码3、git commit -m ‘description’ 4、git pul">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,130 +154,177 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-my-forth-blog" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      git命令提交代码
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/17/my-forth-blog/" class="archive-article-date">
+
+        
+        <a href="/2019/09/17/my-forth-blog/" class="archive-article-date">
   	<time datetime="2019-09-17T09:00:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/17/my-forth-blog/">git命令提交代码</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="git命令提交代码的两种情况"><a href="#git命令提交代码的两种情况" class="headerlink" title="git命令提交代码的两种情况"></a>git命令提交代码的两种情况</h1><h2 id="a）直接切到远程分支开发，例如master"><a href="#a）直接切到远程分支开发，例如master" class="headerlink" title="a）直接切到远程分支开发，例如master"></a>a）直接切到远程分支开发，例如master</h2><p>1、提交代码前，首先通过 git status 命令查看修改了哪些文件</p>
+<p>2、两种git add方法，一般都是直接git add . </p>
+<pre><code>* git add . 添加所有修改文件
+* git add 文件路径 添加自己想要push的文件，适用于提交部分代码</code></pre><p>3、git commit -m ‘description’</p>
+<p>4、git pull</p>
+<p>5、git pull 如果出现其他情况 就输入 :wq</p>
+<p>6、git push</p>
+<h2 id="b）新建自己的远程分支，然后开发-github网页上新建，选择以什么为源"><a href="#b）新建自己的远程分支，然后开发-github网页上新建，选择以什么为源" class="headerlink" title="b）新建自己的远程分支，然后开发(github网页上新建，选择以什么为源)"></a>b）新建自己的远程分支，然后开发(github网页上新建，选择以什么为源)</h2><p>例如在develop上建自己的分支feature -hll</p>
+<p>1、git checkout develop</p>
+<p>2、git pull</p>
+<p>3、git branch -a 此时看到自己的分支</p>
+<p>4、git branch feature -hll</p>
+<p>5、git pull origin develop 保证代码是develop上最新的</p>
+<p>6、此时可以进行开发。。</p>
+<p>7、提交代码</p>
+<p>8、git add .</p>
+<p>9、 git commit -m ‘description’</p>
+<p>10、下面可以选择第11步或者12、13、14</p>
+<p>11、git push 然后去网页上合并代码</p>
+<p>12、git checkout develop</p>
+<p>13、git pull</p>
+<p>14、git merge feature -hll</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/17/my-forth-blog/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/17/my-third-blog/" class="archive-article-date">
-  	<time datetime="2019-09-17T06:37:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/17/my-third-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">可视化大屏使用文档</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/17/my-third-blog/">可视化大屏使用文档</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/17/my-first-blog/" class="archive-article-date">
-  	<time datetime="2019-09-17T02:37:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/17/my-first-blog/">my-first-blog</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/16/hello-world/" class="archive-article-date">
-  	<time datetime="2019-09-16T00:59:25.519Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/16/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -296,8 +347,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
