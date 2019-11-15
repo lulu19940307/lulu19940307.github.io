@@ -152,6 +152,103 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-my-fifth-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/15/my-fifth-blog/">作用域是什么</a>
+    </h1>
+  
+
+        
+        
+<a href="/2019/11/15/my-fifth-blog/" class="archive-article-date">
+  	<time datetime="2019-11-15T06:43:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="作用域是什么"><a href="#作用域是什么" class="headerlink" title="作用域是什么"></a>作用域是什么</h1><p>作用域是一套<strong>规则</strong>，用于确定<strong>在何处以及如何查找变量(标识符)</strong>。根据<strong>查找的目的</strong>将查询分为<strong>LHS查询和RHS查询</strong>(L、R分表代表Left和Right)</p>
+<h2 id="LHS查询"><a href="#LHS查询" class="headerlink" title="LHS查询"></a>LHS查询</h2><p>如果查找的目的<strong>对变量进行赋值</strong>，那么就使用<strong>LHS查询</strong></p>
+<p><strong>赋值操作符</strong>会导致<strong>LHS查询</strong>：=操作符或调用函数时传入参数的操作都会导致关联作用域的赋值操作。</p>
+<p><strong>变量的赋值操作</strong>会执行两个动作(如代码 var a = 2;)：</p>
+<ul>
+<li><p>1.<strong>编译器</strong>在当前作用域中声明一个变量(如果之前没有声明过)</p>
+</li>
+<li><p>2.运行时，<strong>引擎</strong>会在作用域中查找(<strong>LHS查询</strong>)该变量，如果能够找到就会对其进行赋值。</p>
+</li>
+</ul>
+<h2 id="RHS查询"><a href="#RHS查询" class="headerlink" title="RHS查询"></a>RHS查询</h2><p>如果查找的目的是<strong>获取变量的值</strong>，就会使用<strong>RHS查询</strong></p>
+<h2 id="向上查询"><a href="#向上查询" class="headerlink" title="向上查询"></a>向上查询</h2><p><strong>LHS和RHS查询</strong>都会在当前执行作用域中开始，如果有需要(也就是说它们没有找到所需的标识符)，就会<strong>向上级作用域继续查找目标标识符</strong>，这样每次<strong>上升一级作用域</strong>(一层楼)，最后达到全局作用域(顶层),无论找没找到都将停止。</p>
+<h2 id="查询失败结果"><a href="#查询失败结果" class="headerlink" title="查询失败结果"></a>查询失败结果</h2><p><strong>不成功的RHS引用</strong>会抛出ReferenceError异常。</p>
+<p><strong>不成功的LHS引用</strong>会导致自动隐式地创建一个全局变量(非严格模式下),该变量使用LHS引用的目标作为标识符，或者抛出ReferenceError异常(严格模式下)。</p>
+<h2 id="小测验"><a href="#小测验" class="headerlink" title="小测验"></a>小测验</h2><p>1、找到其中的所有的LHS查询（3处）</p>
+<p>2、找到其中的所有的RHS查询（4处）</p>
+<pre><code>function foo(a){
+  var b = a;
+  return a+b;
+}
+var c = foo(2)</code></pre><h2 id="小测验答案"><a href="#小测验答案" class="headerlink" title="小测验答案"></a>小测验答案</h2><p> <strong>LHS查询：</strong>c = ..、a = 2（隐式变量分配）、b = ..</p>
+<p> <strong>RHS查询：</strong>foo(2..、= a、a..、b..</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">你不知道的JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/15/my-fifth-blog/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-my-forth-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -203,6 +300,17 @@ git add 文件路径 添加自己想要push的文件，适用于提交部分代�
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">github命令</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -585,6 +693,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">你不知道的JS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">github命令</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

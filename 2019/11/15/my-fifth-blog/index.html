@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | 黄小鹿🦌</title>
+  <title>作用域是什么 | 黄小鹿🦌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="黄小鹿🦌">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="作用域是什么作用域是一套规则，用于确定在何处以及如何查找变量(标识符)。根据查找的目的将查询分为LHS查询和RHS查询(L、R分表代表Left和Right) LHS查询如果查找的目的对变量进行赋值，那么就使用LHS查询 赋值操作符会导致LHS查询：=操作符或调用函数时传入参数的操作都会导致关联作用域的赋值操作。 变量的赋值操作会执行两个动作(如代码 var a = 2;)：  1.编译器在当前作用">
+<meta name="keywords" content="你不知道的JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="作用域是什么">
+<meta property="og:url" content="http://yoursite.com/2019/11/15/my-fifth-blog/index.html">
 <meta property="og:site_name" content="黄小鹿🦌">
+<meta property="og:description" content="作用域是什么作用域是一套规则，用于确定在何处以及如何查找变量(标识符)。根据查找的目的将查询分为LHS查询和RHS查询(L、R分表代表Left和Right) LHS查询如果查找的目的对变量进行赋值，那么就使用LHS查询 赋值操作符会导致LHS查询：=操作符或调用函数时传入参数的操作都会导致关联作用域的赋值操作。 变量的赋值操作会执行两个动作(如代码 var a = 2;)：  1.编译器在当前作用">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-15T07:18:12.974Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="黄小鹿🦌">
+<meta name="twitter:title" content="作用域是什么">
+<meta name="twitter:description" content="作用域是什么作用域是一套规则，用于确定在何处以及如何查找变量(标识符)。根据查找的目的将查询分为LHS查询和RHS查询(L、R分表代表Left和Right) LHS查询如果查找的目的对变量进行赋值，那么就使用LHS查询 赋值操作符会导致LHS查询：=操作符或调用函数时传入参数的操作都会导致关联作用域的赋值操作。 变量的赋值操作会执行两个动作(如代码 var a = 2;)：  1.编译器在当前作用">
   
     <link rel="alternative" href="/atom.xml" title="黄小鹿🦌" type="application/atom+xml">
   
@@ -150,37 +155,93 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-my-fifth-blog" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/11/15/my-fifth-blog/" class="archive-article-date">
-  	<time datetime="2019-11-15T06:43:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/15/my-fifth-blog/">作用域是什么</a>
+    <h1 class="article-title" itemprop="name">
+      作用域是什么
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv"  class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+<a href="/2019/11/15/my-fifth-blog/" class="archive-article-date">
+  	<time datetime="2019-11-15T06:43:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="作用域是什么"><a href="#作用域是什么" class="headerlink" title="作用域是什么"></a>作用域是什么</h1><p>作用域是一套<strong>规则</strong>，用于确定<strong>在何处以及如何查找变量(标识符)</strong>。根据<strong>查找的目的</strong>将查询分为<strong>LHS查询和RHS查询</strong>(L、R分表代表Left和Right)</p>
+<h2 id="LHS查询"><a href="#LHS查询" class="headerlink" title="LHS查询"></a>LHS查询</h2><p>如果查找的目的<strong>对变量进行赋值</strong>，那么就使用<strong>LHS查询</strong></p>
+<p><strong>赋值操作符</strong>会导致<strong>LHS查询</strong>：=操作符或调用函数时传入参数的操作都会导致关联作用域的赋值操作。</p>
+<p><strong>变量的赋值操作</strong>会执行两个动作(如代码 var a = 2;)：</p>
+<ul>
+<li><p>1.<strong>编译器</strong>在当前作用域中声明一个变量(如果之前没有声明过)</p>
+</li>
+<li><p>2.运行时，<strong>引擎</strong>会在作用域中查找(<strong>LHS查询</strong>)该变量，如果能够找到就会对其进行赋值。</p>
+</li>
+</ul>
+<h2 id="RHS查询"><a href="#RHS查询" class="headerlink" title="RHS查询"></a>RHS查询</h2><p>如果查找的目的是<strong>获取变量的值</strong>，就会使用<strong>RHS查询</strong></p>
+<h2 id="向上查询"><a href="#向上查询" class="headerlink" title="向上查询"></a>向上查询</h2><p><strong>LHS和RHS查询</strong>都会在当前执行作用域中开始，如果有需要(也就是说它们没有找到所需的标识符)，就会<strong>向上级作用域继续查找目标标识符</strong>，这样每次<strong>上升一级作用域</strong>(一层楼)，最后达到全局作用域(顶层),无论找没找到都将停止。</p>
+<h2 id="查询失败结果"><a href="#查询失败结果" class="headerlink" title="查询失败结果"></a>查询失败结果</h2><p><strong>不成功的RHS引用</strong>会抛出ReferenceError异常。</p>
+<p><strong>不成功的LHS引用</strong>会导致自动隐式地创建一个全局变量(非严格模式下),该变量使用LHS引用的目标作为标识符，或者抛出ReferenceError异常(严格模式下)。</p>
+<h2 id="小测验"><a href="#小测验" class="headerlink" title="小测验"></a>小测验</h2><p>1、找到其中的所有的LHS查询（3处）</p>
+<p>2、找到其中的所有的RHS查询（4处）</p>
+<pre><code>function foo(a){
+  var b = a;
+  return a+b;
+}
+var c = foo(2)</code></pre><h2 id="小测验答案"><a href="#小测验答案" class="headerlink" title="小测验答案"></a>小测验答案</h2><p> <strong>LHS查询：</strong>c = ..、a = 2（隐式变量分配）、b = ..</p>
+<p> <strong>RHS查询：</strong>foo(2..、= a、a..、b..</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechatpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -192,142 +253,107 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/15/my-fifth-blog/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/17/my-forth-blog/" class="archive-article-date">
-  	<time datetime="2019-09-17T09:00:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/17/my-forth-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git命令提交代码</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/17/my-forth-blog/">git命令提交代码</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">github命令</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/17/my-third-blog/" class="archive-article-date">
-  	<time datetime="2019-09-17T06:37:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/17/my-third-blog/">可视化大屏使用文档</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/17/my-first-blog/" class="archive-article-date">
-  	<time datetime="2019-09-17T02:37:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/17/my-first-blog/">my-first-blog</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/16/hello-world/" class="archive-article-date">
-  	<time datetime="2019-09-16T00:59:25.519Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/16/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -362,8 +388,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
