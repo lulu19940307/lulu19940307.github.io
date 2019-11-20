@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Node.js 创建第一个应用 | 黄小鹿🦌</title>
+  <title>Node.js回调函数 | 黄小鹿🦌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言简单地说，Node.js就是运行在服务端的JavaScript。在使用Node.js创建第一个应用时，首先得安装Node.js。Node.js的安装配置可参考此文档进行：https://www.runoob.com/nodejs/nodejs-install-setup.html 在用Node.js创建第一个应用时，我们首先了解一下Node.js应用的几个组成部分：  引入require模块：">
+  <meta name="description" content="前言Node.js异步编程的直接体现就是回调。 但注意区别：异步编程依托于回调实现，但不能说回调后程序就异步化了。 回调函数在任务完成后就会被调用，Node使用了大量的回调函数，Node所有API都支持回调函数 回调函数一般作为函数的最后一个参数出现： 12function foo1(name, age, callback)&amp;#123;&amp;#125;function foo2(value, call">
 <meta name="keywords" content="Node.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node.js 创建第一个应用">
-<meta property="og:url" content="http://yoursite.com/2019/11/20/my-sixth-blog/index.html">
+<meta property="og:title" content="Node.js回调函数">
+<meta property="og:url" content="http://yoursite.com/2019/11/20/my-seventh-blog/index.html">
 <meta property="og:site_name" content="黄小鹿🦌">
-<meta property="og:description" content="前言简单地说，Node.js就是运行在服务端的JavaScript。在使用Node.js创建第一个应用时，首先得安装Node.js。Node.js的安装配置可参考此文档进行：https://www.runoob.com/nodejs/nodejs-install-setup.html 在用Node.js创建第一个应用时，我们首先了解一下Node.js应用的几个组成部分：  引入require模块：">
+<meta property="og:description" content="前言Node.js异步编程的直接体现就是回调。 但注意区别：异步编程依托于回调实现，但不能说回调后程序就异步化了。 回调函数在任务完成后就会被调用，Node使用了大量的回调函数，Node所有API都支持回调函数 回调函数一般作为函数的最后一个参数出现： 12function foo1(name, age, callback)&amp;#123;&amp;#125;function foo2(value, call">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-20T02:41:24.482Z">
+<meta property="og:updated_time" content="2019-11-20T08:59:12.487Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node.js 创建第一个应用">
-<meta name="twitter:description" content="前言简单地说，Node.js就是运行在服务端的JavaScript。在使用Node.js创建第一个应用时，首先得安装Node.js。Node.js的安装配置可参考此文档进行：https://www.runoob.com/nodejs/nodejs-install-setup.html 在用Node.js创建第一个应用时，我们首先了解一下Node.js应用的几个组成部分：  引入require模块：">
+<meta name="twitter:title" content="Node.js回调函数">
+<meta name="twitter:description" content="前言Node.js异步编程的直接体现就是回调。 但注意区别：异步编程依托于回调实现，但不能说回调后程序就异步化了。 回调函数在任务完成后就会被调用，Node使用了大量的回调函数，Node所有API都支持回调函数 回调函数一般作为函数的最后一个参数出现： 12function foo1(name, age, callback)&amp;#123;&amp;#125;function foo2(value, call">
   
     <link rel="alternative" href="/atom.xml" title="黄小鹿🦌" type="application/atom+xml">
   
@@ -155,14 +155,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-my-sixth-blog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-my-seventh-blog" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Node.js 创建第一个应用
+      Node.js回调函数
     </h1>
   
 
@@ -173,51 +173,59 @@
 		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
 	</span>
 
-<a href="/2019/11/20/my-sixth-blog/" class="archive-article-date">
-  	<time datetime="2019-11-20T01:51:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+<a href="/2019/11/20/my-seventh-blog/" class="archive-article-date">
+  	<time datetime="2019-11-20T07:46:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>简单地说，Node.js就是运行在服务端的JavaScript。在使用Node.js创建第一个应用时，首先得安装Node.js。Node.js的安装配置可参考此文档进行：<a href="https://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">https://www.runoob.com/nodejs/nodejs-install-setup.html</a></p>
-<p>在用Node.js创建第一个应用时，我们首先了解一下Node.js应用的几个组成部分：</p>
-<ul>
-<li><strong>引入require模块：</strong>我们可以使用<strong>require指令</strong>来载入Node.js模块</li>
-<li><strong>创建服务器：</strong>服务器可以监听客户端的请求，类似Apache、Nginx等HTTP服务器</li>
-<li><strong>接收请求与响应请求：</strong>服务器很容易创建，客户端可以使用浏览器或终端发送HTTP请求，服务器接收请求后返回响应数据</li>
-</ul>
-<h2 id="创建Node-js应用"><a href="#创建Node-js应用" class="headerlink" title="创建Node.js应用"></a>创建Node.js应用</h2><h3 id="步骤一、引入require模块"><a href="#步骤一、引入require模块" class="headerlink" title="步骤一、引入require模块"></a>步骤一、引入require模块</h3><p>使用<strong>require指令载入http模块</strong>，并将实例化的HTTP赋值给变量http：</p>
-<pre><code>var http = require(&quot;http&quot;)</code></pre><h3 id="步骤二、创建服务器"><a href="#步骤二、创建服务器" class="headerlink" title="步骤二、创建服务器"></a>步骤二、创建服务器</h3><p>使用<strong>http.createServer()</strong>方法创建服务器，并使用listen方法绑定8888端口。函数通过request，response参数来接收和响应数据。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Node.js<strong>异步编程</strong>的直接体现就是<strong>回调</strong>。</p>
+<p>但<strong>注意区别</strong>：异步编程依托于回调实现，但不能说回调后程序就异步化了。</p>
+<p><strong>回调函数在任务完成后就会被调用</strong>，Node使用了大量的回调函数，Node所有API都支持回调函数</p>
+<p>回调函数一般作为函数的最后一个参数出现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function foo1(name, age, callback)&#123;&#125;</span><br><span class="line">function foo2(value, callback1, callback2)&#123;&#125;</span><br></pre></td></tr></table></figure>
+
 <a id="more"></a>
-
-<h2 id="第一个Node-js应用的完整代码及步骤"><a href="#第一个Node-js应用的完整代码及步骤" class="headerlink" title="第一个Node.js应用的完整代码及步骤"></a>第一个Node.js应用的完整代码及步骤</h2><ul>
-<li><p>在终端通过<strong>vim server.js</strong>命令创建并打开server.js文件</p>
+<h2 id="读取文件实例"><a href="#读取文件实例" class="headerlink" title="读取文件实例"></a>读取文件实例</h2><h3 id="阻塞代码实例"><a href="#阻塞代码实例" class="headerlink" title="阻塞代码实例"></a>阻塞代码实例</h3><p>等待文件读取完毕之后，再执行其他命令。</p>
+<p>此时使用<strong>readFileSync()方法</strong>，这是<strong>fs模块同步读取文件的方法</strong>，会产生阻塞效果。步骤如下：</p>
+<ul>
+<li><p>创建一个文件input.txt，里面内容：黄小鹿🦌的博客地址：<a href="https://www.lucky-seven.cn/" target="_blank" rel="noopener">https://www.lucky-seven.cn/</a></p>
 </li>
-<li><p>键盘输入<strong>i</strong>对server.js文件进行编辑（<strong>i代表insert，插入模式</strong>）</p>
-</li>
-<li><p>输入以下完整代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var http = require(&quot;http&quot;);</span><br><span class="line">http.createServer(function(request, response)&#123;</span><br><span class="line">	//发送http头部</span><br><span class="line">	//http状态值：200:ok</span><br><span class="line">	//内容类型：text/plain</span><br><span class="line">	response.writeHead(200, &#123;&apos;Content-TYpe&apos;: &apos;text/plain&apos;&#125;); </span><br><span class="line">	//发送响应数据&apos;hello your sister...&apos;</span><br><span class="line">	response.end(&apos;hello your sister...&apos;)</span><br><span class="line">&#125;).listen(8888)</span><br><span class="line">//终端打印如下信息</span><br><span class="line">console.log(&quot;Server running at http://127.0.0.1:8888/&quot;)</span><br></pre></td></tr></table></figure>
+<li><p>创建main.js文件，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var fs = require(&apos;fs&apos;);</span><br><span class="line">var data = fs.readFileSync(&apos;/Users/huanglulu/Desktop/input.txt&apos;);</span><br><span class="line">//其中data获得的是文件内容的buffer（二进制）数据，想获得原字符串内容就要加toString()方法</span><br><span class="line">console.log(data.toString());</span><br><span class="line">console.log(&apos;程序执行完毕！&apos;);</span><br></pre></td></tr></table></figure>
 
 
 </li>
 </ul>
 <ul>
-<li><p>键盘按esc退出插入模式，并输入<strong>:wq</strong>对server.js进行保存并退出</p>
-</li>
-<li><p>node命令执行以上的代码：</p>
-<p>   node server.js</p>
-</li>
-<li><p>终端打印信息：Server running at <a href="http://127.0.0.1:8888/" target="_blank" rel="noopener">http://127.0.0.1:8888/</a></p>
-</li>
-<li><p>打开浏览器访问 <a href="http://127.0.0.1:8888/" target="_blank" rel="noopener">http://127.0.0.1:8888/</a> 出现 hello your sister…</p>
+<li><p>输入<strong>node main.js</strong>得到如下结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">黄小鹿🦌的博客地址：https://www.lucky-seven.cn/</span><br><span class="line">程序执行完毕！</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
-<h2 id="分析Node-js的HTTP服务器："><a href="#分析Node-js的HTTP服务器：" class="headerlink" title="分析Node.js的HTTP服务器："></a>分析Node.js的HTTP服务器：</h2><ul>
-<li>第一行请求（require）Node.js自带的http模块，并把它赋值给http变量</li>
-<li>接下来调用http模块提供的<strong>reateServer函数</strong>。这个函数会返回一个对象，此对象有一个<strong>叫做listen的方法</strong>，这个listen方法有<strong>一个数值参数</strong>，用于指定这个HTTP服务器监听的端口号。</li>
+<h3 id="非阻塞代码实例"><a href="#非阻塞代码实例" class="headerlink" title="非阻塞代码实例"></a>非阻塞代码实例</h3><p>一边读取文件，一边执行其他命令。在文件读取完成后，<strong>将文件内容作为回调函数的参数返回</strong>。这样在执行代码时，就没有阻塞或者等待文件I/O操作。大大提高Node.js的性能，可以处理大量的并发请求。</p>
+<p>此时，使用<strong>readFile()方法异步读取文件</strong>。此方法采用<strong>错误优先机制，即回调函数的第一个参数为错误信息。</strong>具体步骤如下：</p>
+<ul>
+<li><p>创建一个文件input.txt，里面内容：黄小鹿🦌的博客地址：<a href="https://www.lucky-seven.cn/" target="_blank" rel="noopener">https://www.lucky-seven.cn/</a></p>
+</li>
+<li><p>创建main.js文件，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var fs = require(&apos;fs&apos;);</span><br><span class="line">fs.readFile(&apos;/Users/huanglulu/Desktop/input.txt&apos;,(err,data)=&gt;&#123;</span><br><span class="line">   if(err) return console.error(err);</span><br><span class="line">   //其中data获得的是文件内容的buffer（二进制）数据，想获得原字符串内容就要加toString()方法</span><br><span class="line">   console.log(data.toString());</span><br><span class="line">&#125;);</span><br><span class="line">console.log(&apos;程序执行完毕！&apos;);</span><br></pre></td></tr></table></figure>
+
+
+</li>
 </ul>
+<ul>
+<li><p>输入<strong>node main.js</strong>得到如下结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">程序执行完毕！</span><br><span class="line">黄小鹿🦌的博客地址：https://www.lucky-seven.cn/</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>从以上两个实例，我们了解了阻塞与非阻塞调用的不同。第一个实例在等待文件读取完后才执行程序。第二个实例不需要等待文件读取完，这样就可以在读取文件的同时执行接下来的代码，大大提高了程序的性能。</p>
+<p>因此，<strong>阻塞是按顺序执行的，而非阻塞是不需要按顺序的</strong>，所以如果需要处理回调函数的参数，我们就需要写在回调函数内。</p>
 
       
 
@@ -318,7 +326,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/20/my-sixth-blog/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/20/my-seventh-blog/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -332,18 +340,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/20/my-seventh-blog/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Node.js回调函数
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/15/my-fifth-blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">作用域是什么</div>
+    <a href="/2019/11/20/my-sixth-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Node.js 创建第一个应用</div>
       <i class="icon-circle-right"></i>
     </a>
   
