@@ -262,8 +262,6 @@
 <li><strong>创建服务器：</strong>服务器可以监听客户端的请求，类似Apache、Nginx等HTTP服务器</li>
 <li><strong>接收请求与响应请求：</strong>服务器很容易创建，客户端可以使用浏览器或终端发送HTTP请求，服务器接收请求后返回响应数据</li>
 </ul>
-<h2 id="创建Node-js应用"><a href="#创建Node-js应用" class="headerlink" title="创建Node.js应用"></a>创建Node.js应用</h2><h3 id="步骤一、引入require模块"><a href="#步骤一、引入require模块" class="headerlink" title="步骤一、引入require模块"></a>步骤一、引入require模块</h3><p>使用<strong>require指令载入http模块</strong>，并将实例化的HTTP赋值给变量http：</p>
-<pre><code>var http = require(&quot;http&quot;)</code></pre><h3 id="步骤二、创建服务器"><a href="#步骤二、创建服务器" class="headerlink" title="步骤二、创建服务器"></a>步骤二、创建服务器</h3><p>使用<strong>http.createServer()</strong>方法创建服务器，并使用listen方法绑定8888端口。函数通过request，response参数来接收和响应数据。</p>
         
           <a class="article-more-a" href="/2019/11/20/my-sixth-blog/#more">more >></a>
         
@@ -342,28 +340,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="作用域是什么"><a href="#作用域是什么" class="headerlink" title="作用域是什么"></a>作用域是什么</h1><p>作用域是一套<strong>规则</strong>，用于确定<strong>在何处以及如何查找变量(标识符)</strong>。根据<strong>查找的目的</strong>将查询分为<strong>LHS查询和RHS查询</strong>(L、R分表代表Left和Right)</p>
-<h2 id="LHS查询"><a href="#LHS查询" class="headerlink" title="LHS查询"></a>LHS查询</h2><p>如果查找的目的<strong>对变量进行赋值</strong>，那么就使用<strong>LHS查询</strong></p>
-<p><strong>赋值操作符</strong>会导致<strong>LHS查询</strong>：=操作符或调用函数时传入参数的操作都会导致关联作用域的赋值操作。</p>
-<p><strong>变量的赋值操作</strong>会执行两个动作(如代码 var a = 2;)：</p>
-<ul>
-<li><p>1.<strong>编译器</strong>在当前作用域中声明一个变量(如果之前没有声明过)</p>
-</li>
-<li><p>2.运行时，<strong>引擎</strong>会在作用域中查找(<strong>LHS查询</strong>)该变量，如果能够找到就会对其进行赋值。</p>
-</li>
-</ul>
-<h2 id="RHS查询"><a href="#RHS查询" class="headerlink" title="RHS查询"></a>RHS查询</h2><p>如果查找的目的是<strong>获取变量的值</strong>，就会使用<strong>RHS查询</strong></p>
-<h2 id="向上查询"><a href="#向上查询" class="headerlink" title="向上查询"></a>向上查询</h2><p><strong>LHS和RHS查询</strong>都会在当前执行作用域中开始，如果有需要(也就是说它们没有找到所需的标识符)，就会<strong>向上级作用域继续查找目标标识符</strong>，这样每次<strong>上升一级作用域</strong>(一层楼)，最后达到全局作用域(顶层),无论找没找到都将停止。</p>
-<h2 id="查询失败结果"><a href="#查询失败结果" class="headerlink" title="查询失败结果"></a>查询失败结果</h2><p><strong>不成功的RHS引用</strong>会抛出ReferenceError异常。</p>
-<p><strong>不成功的LHS引用</strong>会导致自动隐式地创建一个全局变量(非严格模式下),该变量使用LHS引用的目标作为标识符，或者抛出ReferenceError异常(严格模式下)。</p>
-<h2 id="小测验"><a href="#小测验" class="headerlink" title="小测验"></a>小测验</h2><p>1、找到其中的所有的LHS查询（3处）</p>
-<p>2、找到其中的所有的RHS查询（4处）</p>
-<pre><code>function foo(a){
-  var b = a;
-  return a+b;
-}
-var c = foo(2)</code></pre><h2 id="小测验答案"><a href="#小测验答案" class="headerlink" title="小测验答案"></a>小测验答案</h2><p> <strong>LHS查询：</strong>c = ..、a = 2（隐式变量分配）、b = ..</p>
-<p> <strong>RHS查询：</strong>foo(2..、= a、a..、b..</p>
-
+        
+          <a class="article-more-a" href="/2019/11/15/my-fifth-blog/#more">more >></a>
+        
       
 
       
@@ -445,22 +424,9 @@ git add 文件路径 添加自己想要push的文件，适用于提交部分代�
 <p>4、git pull</p>
 <p>5、git pull 如果出现其他情况 就输入 :wq</p>
 <p>6、git push</p>
-<h2 id="b）新建自己的远程分支，然后开发-github网页上新建，选择以什么为源"><a href="#b）新建自己的远程分支，然后开发-github网页上新建，选择以什么为源" class="headerlink" title="b）新建自己的远程分支，然后开发(github网页上新建，选择以什么为源)"></a>b）新建自己的远程分支，然后开发(github网页上新建，选择以什么为源)</h2><p>例如在develop上建自己的分支feature -hll</p>
-<p>1、git checkout develop</p>
-<p>2、git pull</p>
-<p>3、git branch -a 此时看到自己的分支</p>
-<p>4、git branch feature -hll</p>
-<p>5、git pull origin develop 保证代码是develop上最新的</p>
-<p>6、此时可以进行开发。。</p>
-<p>7、提交代码</p>
-<p>8、git add .</p>
-<p>9、 git commit -m ‘description’</p>
-<p>10、下面可以选择第11步或者12、13、14</p>
-<p>11、git push 然后去网页上合并代码</p>
-<p>12、git checkout develop</p>
-<p>13、git pull</p>
-<p>14、git merge feature -hll</p>
-
+        
+          <a class="article-more-a" href="/2019/09/17/my-forth-blog/#more">more >></a>
+        
       
 
       
@@ -863,11 +829,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">github命令</a>
+                <a href="javascript:void(0)" class="js-tag color3">你不知道的JS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">你不知道的JS</a>
+                <a href="javascript:void(0)" class="js-tag color4">github命令</a>
               </li>
              
               <li class="article-tag-list-item">
