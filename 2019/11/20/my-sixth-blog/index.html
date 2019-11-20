@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Node.js 创建第一个应用 | 黄小鹿🦌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="简单地说，Node.js就是运行在服务端的JavaScript。在使用Node.js创建第一个应用时，首先得安装Node.js。Node.js的安装配置可参考此文档进行：https://www.runoob.com/nodejs/nodejs-install-setup.html">
+  <meta name="description" content="前言简单地说，Node.js就是运行在服务端的JavaScript。在使用Node.js创建第一个应用时，首先得安装Node.js。Node.js的安装配置可参考此文档进行：https://www.runoob.com/nodejs/nodejs-install-setup.html 在用Node.js创建第一个应用时，我们首先了解一下Node.js应用的几个组成部分：  引入require模块：">
 <meta name="keywords" content="Node.js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js 创建第一个应用">
 <meta property="og:url" content="http://yoursite.com/2019/11/20/my-sixth-blog/index.html">
 <meta property="og:site_name" content="黄小鹿🦌">
-<meta property="og:description" content="简单地说，Node.js就是运行在服务端的JavaScript。在使用Node.js创建第一个应用时，首先得安装Node.js。Node.js的安装配置可参考此文档进行：https://www.runoob.com/nodejs/nodejs-install-setup.html">
+<meta property="og:description" content="前言简单地说，Node.js就是运行在服务端的JavaScript。在使用Node.js创建第一个应用时，首先得安装Node.js。Node.js的安装配置可参考此文档进行：https://www.runoob.com/nodejs/nodejs-install-setup.html 在用Node.js创建第一个应用时，我们首先了解一下Node.js应用的几个组成部分：  引入require模块：">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-20T01:56:35.765Z">
+<meta property="og:updated_time" content="2019-11-20T02:41:24.482Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js 创建第一个应用">
-<meta name="twitter:description" content="简单地说，Node.js就是运行在服务端的JavaScript。在使用Node.js创建第一个应用时，首先得安装Node.js。Node.js的安装配置可参考此文档进行：https://www.runoob.com/nodejs/nodejs-install-setup.html">
+<meta name="twitter:description" content="前言简单地说，Node.js就是运行在服务端的JavaScript。在使用Node.js创建第一个应用时，首先得安装Node.js。Node.js的安装配置可参考此文档进行：https://www.runoob.com/nodejs/nodejs-install-setup.html 在用Node.js创建第一个应用时，我们首先了解一下Node.js应用的几个组成部分：  引入require模块：">
   
     <link rel="alternative" href="/atom.xml" title="黄小鹿🦌" type="application/atom+xml">
   
@@ -181,7 +181,44 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>简单地说，Node.js就是运行在服务端的JavaScript。在使用Node.js创建第一个应用时，首先得安装Node.js。Node.js的安装配置可参考此文档进行：<a href="https://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">https://www.runoob.com/nodejs/nodejs-install-setup.html</a></p>
+<p>在用Node.js创建第一个应用时，我们首先了解一下Node.js应用的几个组成部分：</p>
+<ul>
+<li><strong>引入require模块：</strong>我们可以使用<strong>require指令</strong>来载入Node.js模块</li>
+<li><strong>创建服务器：</strong>服务器可以监听客户端的请求，类似Apache、Nginx等HTTP服务器</li>
+<li><strong>接收请求与响应请求：</strong>服务器很容易创建，客户端可以使用浏览器或终端发送HTTP请求，服务器接收请求后返回响应数据</li>
+</ul>
+<h2 id="创建Node-js应用"><a href="#创建Node-js应用" class="headerlink" title="创建Node.js应用"></a>创建Node.js应用</h2><h3 id="步骤一、引入require模块"><a href="#步骤一、引入require模块" class="headerlink" title="步骤一、引入require模块"></a>步骤一、引入require模块</h3><p>使用<strong>require指令载入http模块</strong>，并将实例化的HTTP赋值给变量http：</p>
+<pre><code>var http = require(&quot;http&quot;)</code></pre><h3 id="步骤二、创建服务器"><a href="#步骤二、创建服务器" class="headerlink" title="步骤二、创建服务器"></a>步骤二、创建服务器</h3><p>使用<strong>http.createServer()</strong>方法创建服务器，并使用listen方法绑定8888端口。函数通过request，response参数来接收和响应数据。</p>
+<a id="more"></a>
+
+<h2 id="第一个Node-js应用的完整代码及步骤"><a href="#第一个Node-js应用的完整代码及步骤" class="headerlink" title="第一个Node.js应用的完整代码及步骤"></a>第一个Node.js应用的完整代码及步骤</h2><ul>
+<li><p>在终端通过<strong>vim server.js</strong>命令创建并打开server.js文件</p>
+</li>
+<li><p>键盘输入<strong>i</strong>对server.js文件进行编辑（<strong>i代表insert，插入模式</strong>）</p>
+</li>
+<li><p>输入以下完整代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var http = require(&quot;http&quot;);</span><br><span class="line">http.createServer(function(request, response)&#123;</span><br><span class="line">	//发送http头部</span><br><span class="line">	//http状态值：200:ok</span><br><span class="line">	//内容类型：text/plain</span><br><span class="line">	response.writeHead(200, &#123;&apos;Content-TYpe&apos;: &apos;text/plain&apos;&#125;); </span><br><span class="line">	//发送响应数据&apos;hello your sister...&apos;</span><br><span class="line">	response.end(&apos;hello your sister...&apos;)</span><br><span class="line">&#125;).listen(8888)</span><br><span class="line">//终端打印如下信息</span><br><span class="line">console.log(&quot;Server running at http://127.0.0.1:8888/&quot;)</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<ul>
+<li><p>键盘按esc退出插入模式，并输入<strong>:wq</strong>对server.js进行保存并退出</p>
+</li>
+<li><p>node命令执行以上的代码：</p>
+<p>   node server.js</p>
+</li>
+<li><p>终端打印信息：Server running at <a href="http://127.0.0.1:8888/" target="_blank" rel="noopener">http://127.0.0.1:8888/</a></p>
+</li>
+<li><p>打开浏览器访问 <a href="http://127.0.0.1:8888/" target="_blank" rel="noopener">http://127.0.0.1:8888/</a> 出现 hello your sister…</p>
+</li>
+</ul>
+<h2 id="分析Node-js的HTTP服务器："><a href="#分析Node-js的HTTP服务器：" class="headerlink" title="分析Node.js的HTTP服务器："></a>分析Node.js的HTTP服务器：</h2><ul>
+<li>第一行请求（require）Node.js自带的http模块，并把它赋值给http变量</li>
+<li>接下来调用http模块提供的<strong>reateServer函数</strong>。这个函数会返回一个对象，此对象有一个<strong>叫做listen的方法</strong>，这个listen方法有<strong>一个数值参数</strong>，用于指定这个HTTP服务器监听的端口号。</li>
+</ul>
+
       
 
       
@@ -436,15 +473,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">github命令</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">你不知道的JS</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">github命令</a>
               </li>
             
             <div class="clearfix"></div>
