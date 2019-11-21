@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="黄小鹿🦌">
 <meta property="og:description" content="五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。除了null类型以外，其他基本数据类型均可以用typeof判断。如： 12var a = null;typeof(a)  以上代码的结果为：object">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-21T08:00:37.666Z">
+<meta property="og:updated_time" content="2019-11-21T08:43:54.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript知识点汇总">
 <meta name="twitter:description" content="五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。除了null类型以外，其他基本数据类型均可以用typeof判断。如： 12var a = null;typeof(a)  以上代码的结果为：object">
@@ -181,33 +181,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。"><a href="#五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。" class="headerlink" title="五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。"></a>五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。</h4><p>除了null类型以外，其他基本数据类型均可以用<strong>typeof判断</strong>。如：</p>
+        <h3 id="五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。"><a href="#五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。" class="headerlink" title="五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。"></a>五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。</h3><p>除了null类型以外，其他基本数据类型均可以用<strong>typeof判断</strong>。如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var a = null;</span><br><span class="line">typeof(a)</span><br></pre></td></tr></table></figure>
 
 <p>以上代码的结果为：object</p>
 <a id="more"></a>
 
-<h4 id="引用类型：由多值构成的对象，用instanceof判断时什么样的对象。存在于堆内存中。"><a href="#引用类型：由多值构成的对象，用instanceof判断时什么样的对象。存在于堆内存中。" class="headerlink" title="引用类型：由多值构成的对象，用instanceof判断时什么样的对象。存在于堆内存中。"></a>引用类型：由多值构成的对象，用instanceof判断时什么样的对象。存在于堆内存中。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2];</span><br><span class="line">arr instanceof Array;</span><br><span class="line">arr instanceof Object;</span><br></pre></td></tr></table></figure>
+<h3 id="引用类型：由多值构成的对象，用instanceof判断时什么样的对象。存在于堆内存中。"><a href="#引用类型：由多值构成的对象，用instanceof判断时什么样的对象。存在于堆内存中。" class="headerlink" title="引用类型：由多值构成的对象，用instanceof判断时什么样的对象。存在于堆内存中。"></a>引用类型：由多值构成的对象，用instanceof判断时什么样的对象。存在于堆内存中。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2];</span><br><span class="line">arr instanceof Array;</span><br><span class="line">arr instanceof Object;</span><br></pre></td></tr></table></figure>
 
 <p>以上代码的结果为：true, true</p>
 <p><strong>注意：</strong>如果使用instanceof操作符检测基本数据类型的值，则该操作符始终会返回false。如a instnceof object的值为false。</p>
-<h4 id="数组的一些操作方法"><a href="#数组的一些操作方法" class="headerlink" title="数组的一些操作方法"></a>数组的一些操作方法</h4><p>push：插末尾。<br>pop：弹末尾。<br>unshift：插前面。<br>shift：弹前面。</p>
-<h4 id="执行环境"><a href="#执行环境" class="headerlink" title="执行环境"></a>执行环境</h4><p>执行环境又简称为<strong>环境</strong></p>
+<h3 id="数组的一些操作方法"><a href="#数组的一些操作方法" class="headerlink" title="数组的一些操作方法"></a>数组的一些操作方法</h3><p>push：插末尾。<br>pop：弹末尾。<br>unshift：插前面。<br>shift：弹前面。</p>
+<h3 id="执行环境"><a href="#执行环境" class="headerlink" title="执行环境"></a>执行环境</h3><p>执行环境又简称为<strong>环境</strong></p>
 <ul>
 <li>内部环境可以通过作用域链访问所有的外部环境</li>
 <li>但外部环境不能访问内部环境中的任何变量和函数</li>
 <li>每个环境都可以<strong>向上搜索作用域链</strong>，以查询变量和函数名</li>
 </ul>
-<h4 id="没有块级作用域"><a href="#没有块级作用域" class="headerlink" title="没有块级作用域"></a>没有块级作用域</h4><p>以下两段代码<strong>没有块级作用域，属于同一环境(不是function,是if和for)</strong></p>
+<h3 id="没有块级作用域"><a href="#没有块级作用域" class="headerlink" title="没有块级作用域"></a>没有块级作用域</h3><p>以下两段代码<strong>没有块级作用域，属于同一环境(不是function,是if和for)</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if(true)&#123;</span><br><span class="line">   var color = &quot;blue&quot;;</span><br><span class="line">&#125;</span><br><span class="line">console.log(color);//&quot;blue&quot;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for(var i = 0;i&lt;10;i++)&#123;</span><br><span class="line">   dosomething;</span><br><span class="line">&#125;</span><br><span class="line">alert(i);//10</span><br></pre></td></tr></table></figure>
 
-<h4 id="数组的forEach方法：没有返回值！"><a href="#数组的forEach方法：没有返回值！" class="headerlink" title="数组的forEach方法：没有返回值！"></a>数组的forEach方法：没有返回值！</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,3,45,2,44,0,9];</span><br><span class="line">arr.forEach((index,item,array)=&gt;&#123;</span><br><span class="line">   array[indet] = item * 10;</span><br><span class="line">&#125;)//undefined</span><br><span class="line">arr //[10,30,450,20,440,0,90]</span><br></pre></td></tr></table></figure>
+<h3 id="数组的forEach方法：没有返回值！"><a href="#数组的forEach方法：没有返回值！" class="headerlink" title="数组的forEach方法：没有返回值！"></a>数组的forEach方法：没有返回值！</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,3,45,2,44,0,9];</span><br><span class="line">arr.forEach((index,item,array)=&gt;&#123;</span><br><span class="line">   array[indet] = item * 10;</span><br><span class="line">&#125;)//undefined</span><br><span class="line">arr //[10,30,450,20,440,0,90]</span><br></pre></td></tr></table></figure>
 
-<h4 id="数组的map方法：有返回值-可以return出来！"><a href="#数组的map方法：有返回值-可以return出来！" class="headerlink" title="数组的map方法：有返回值,可以return出来！"></a>数组的map方法：有返回值,可以return出来！</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,3,45,2,44,0,9];</span><br><span class="line">arr.map((index,item,array)=&gt;&#123;</span><br><span class="line">   return item * 10;</span><br><span class="line">&#125;) //[10,30,450,20,440,0,90]</span><br><span class="line">arr //还是原来的数组 [1,3,45,2,44,0,9]</span><br></pre></td></tr></table></figure>
+<h3 id="数组的map方法：有返回值-可以return出来！"><a href="#数组的map方法：有返回值-可以return出来！" class="headerlink" title="数组的map方法：有返回值,可以return出来！"></a>数组的map方法：有返回值,可以return出来！</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,3,45,2,44,0,9];</span><br><span class="line">arr.map((index,item,array)=&gt;&#123;</span><br><span class="line">   return item * 10;</span><br><span class="line">&#125;) //[10,30,450,20,440,0,90]</span><br><span class="line">arr //还是原来的数组 [1,3,45,2,44,0,9]</span><br></pre></td></tr></table></figure>
 
-<h4 id="数组的归并方法：reduce-和reduceRight"><a href="#数组的归并方法：reduce-和reduceRight" class="headerlink" title="数组的归并方法：reduce()和reduceRight()"></a>数组的归并方法：reduce()和reduceRight()</h4><p>reduce()和reduceRight()方法均接收四个参数：<strong>前一个值,当前值,项的索引和数组对象。返回的任何值都会作为第一个参数自动给下一项。</strong></p>
+<h3 id="数组的归并方法：reduce-和reduceRight"><a href="#数组的归并方法：reduce-和reduceRight" class="headerlink" title="数组的归并方法：reduce()和reduceRight()"></a>数组的归并方法：reduce()和reduceRight()</h3><p>reduce()和reduceRight()方法均接收四个参数：<strong>前一个值,当前值,项的索引和数组对象。返回的任何值都会作为第一个参数自动给下一项。</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[1,2,3,4,5].reduce((prev,cur,index,array)=&gt;&#123;</span><br><span class="line">   return prev+cur;</span><br><span class="line">&#125;);//15</span><br></pre></td></tr></table></figure>
 
 <p>上述代码第一次执行回调函数时，prev是1，cur是2，第二次执行回调函数时，prev是3(2+1),cur是3…</p>
@@ -473,15 +473,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">github命令</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
             
             <div class="clearfix"></div>
