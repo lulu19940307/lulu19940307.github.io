@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>my-first-blog | 黄小鹿🦌</title>
+  <title>JavaScript难题汇总一 | 黄小鹿🦌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言使用github pages服务搭建博客的好处有：  全是静态文件，访问速度快； 免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台； 可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；">
+  <meta name="description" content="Q1：[“1”,”2”,”3”].map(parseInt)为什么返回[1,NaN,NaN]parseInt基本用法定义：1、parseInt函数可解析一个字符串，并返回一个整数 语法： parseInt(string,radix) 说明：   1、string：必需，需要被解析的字符串； 2、radix：可选，表示要解析的数字的基数，该值介于2～36之间 如果省略该参数或其值为0，则数字将以10">
+<meta name="keywords" content="你不知道的JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my-first-blog">
-<meta property="og:url" content="http://yoursite.com/2019/09/17/my-first-blog/index.html">
+<meta property="og:title" content="JavaScript难题汇总一">
+<meta property="og:url" content="http://yoursite.com/2019/11/21/my-eighth-blog/index.html">
 <meta property="og:site_name" content="黄小鹿🦌">
-<meta property="og:description" content="前言使用github pages服务搭建博客的好处有：  全是静态文件，访问速度快； 免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台； 可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；">
+<meta property="og:description" content="Q1：[“1”,”2”,”3”].map(parseInt)为什么返回[1,NaN,NaN]parseInt基本用法定义：1、parseInt函数可解析一个字符串，并返回一个整数 语法： parseInt(string,radix) 说明：   1、string：必需，需要被解析的字符串； 2、radix：可选，表示要解析的数字的基数，该值介于2～36之间 如果省略该参数或其值为0，则数字将以10">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-17T06:34:31.480Z">
+<meta property="og:updated_time" content="2019-11-21T07:21:08.912Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my-first-blog">
-<meta name="twitter:description" content="前言使用github pages服务搭建博客的好处有：  全是静态文件，访问速度快； 免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台； 可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；">
+<meta name="twitter:title" content="JavaScript难题汇总一">
+<meta name="twitter:description" content="Q1：[“1”,”2”,”3”].map(parseInt)为什么返回[1,NaN,NaN]parseInt基本用法定义：1、parseInt函数可解析一个字符串，并返回一个整数 语法： parseInt(string,radix) 说明：   1、string：必需，需要被解析的字符串； 2、radix：可选，表示要解析的数字的基数，该值介于2～36之间 如果省略该参数或其值为0，则数字将以10">
   
     <link rel="alternative" href="/atom.xml" title="黄小鹿🦌" type="application/atom+xml">
   
@@ -154,14 +155,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-my-first-blog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-my-eighth-blog" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      my-first-blog
+      JavaScript难题汇总一
     </h1>
   
 
@@ -172,27 +173,51 @@
 		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
 	</span>
 
-<a href="/2019/09/17/my-first-blog/" class="archive-article-date">
-  	<time datetime="2019-09-17T02:37:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
+<a href="/2019/11/21/my-eighth-blog/" class="archive-article-date">
+  	<time datetime="2019-11-21T05:59:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用github pages服务搭建博客的好处有：</p>
-<ol>
-<li>全是静态文件，访问速度快；</li>
-<li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</li>
-<li>可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</li>
-</ol>
+        <h2 id="Q1：-“1”-”2”-”3”-map-parseInt-为什么返回-1-NaN-NaN"><a href="#Q1：-“1”-”2”-”3”-map-parseInt-为什么返回-1-NaN-NaN" class="headerlink" title="Q1：[“1”,”2”,”3”].map(parseInt)为什么返回[1,NaN,NaN]"></a>Q1：[“1”,”2”,”3”].map(parseInt)为什么返回[1,NaN,NaN]</h2><h3 id="parseInt基本用法"><a href="#parseInt基本用法" class="headerlink" title="parseInt基本用法"></a>parseInt基本用法</h3><p><strong>定义：</strong>1、parseInt函数可解析一个字符串，并返回一个整数</p>
+<p><strong>语法：</strong> parseInt(string,radix)</p>
+<p><strong>说明：</strong> </p>
+<ul>
+<li>1、string：必需，需要被解析的字符串；</li>
+<li>2、radix：可选，表示要解析的数字的基数，该值介于2～36之间<ul>
+<li>如果省略该参数或其值为0，则数字将以10为基础进行解析</li>
+<li>如果它以”ox”或者”Ox”开头，将以16为基数</li>
+<li>当radix的值为0，或没有设置该参数时，parseInt()会根据string来判断数字的基数</li>
+</ul>
+</li>
+</ul>
+<p><strong>注：</strong>parseInt(“ “)-&gt;NaN，Number(“ “)-&gt;0</p>
 <a id="more"></a>
 
-<ol start="4">
-<li>数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</li>
-<li>博客内容可以轻松打包、转移、发布到其它平台；</li>
-<li>等等；</li>
-</ol>
+<h3 id="map迭代时，parseInt函数的参数"><a href="#map迭代时，parseInt函数的参数" class="headerlink" title="map迭代时，parseInt函数的参数"></a>map迭代时，parseInt函数的参数</h3><p>因为parseInt()是JavaScript的内置函数，所以在map迭代时，会给parseInt()函数传入三个参数——<strong>数组每一项元素的值、元素的索引、整个数组对象。</strong></p>
+<h3 id="“1”-”2”-”3”-map-parseInt-具体过程"><a href="#“1”-”2”-”3”-map-parseInt-具体过程" class="headerlink" title="[“1”,”2”,”3”].map(parseInt)具体过程"></a>[“1”,”2”,”3”].map(parseInt)具体过程</h3><p>此过程强制地把<strong>数组元素的索引</strong>传到parseInt()的第二个参数中：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">parseInt(&quot;1&quot;,0,[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;])//第三个参数被忽略。将字符串&quot;1&quot;转成十进制，结果为1</span><br><span class="line">parseInt(&quot;2&quot;,1,[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;])//第三个参数被忽略。将字符串&quot;2&quot;转成1进制，不存在1进制，也就是说不符合2～36的范围，返回NaN。</span><br><span class="line">parseInt(&quot;3&quot;,2,[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;])//第三个参数被忽略。将字符串&quot;3&quot;转成2进制，2进制只有0和1组成，返回NaN。</span><br></pre></td></tr></table></figure>
+
+<h2 id="Q2：如何用一行代码求出数组的最大值"><a href="#Q2：如何用一行代码求出数组的最大值" class="headerlink" title="Q2：如何用一行代码求出数组的最大值"></a>Q2：如何用一行代码求出数组的最大值</h2><p>一、自己想的：<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.sort((a,b)=&gt;&#123;return a-b&#125;)[arr.length-1]</span><br></pre></td></tr></table></figure></p>
+<p>二、用Math对象：<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Math.max.apply(Math.arr)</span><br></pre></td></tr></table></figure></p>
+<p><strong>扩展：</strong>用random()方法生成随机数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">值=Math.floor(Math.random*可能值的总数+第一个可能的值)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Q3：promise问题"><a href="#Q3：promise问题" class="headerlink" title="Q3：promise问题"></a>Q3：promise问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">new Promise((resolve,reject)=&gt;&#123;</span><br><span class="line">   reject(3);//执行catch,所以后一句代码不执行</span><br><span class="line">   resolve(4);//不执行这部分代码</span><br><span class="line">&#125;).then((arg)=&gt;&#123;</span><br><span class="line">   console.log(arg)</span><br><span class="line">&#125;).catch((res)=&gt;&#123;</span><br><span class="line">   console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>上述代码的输出结果：3</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">console.log(1);</span><br><span class="line">setTimeout(()=&gt;&#123;console.log(2)&#125;);//最后执行 第二个宏任务</span><br><span class="line">new Promise((resolve,reject)=&gt;&#123;</span><br><span class="line">    resolve(3);//执行then那部分代码</span><br><span class="line">    resolve(4);//不执行这部分代码</span><br><span class="line">    console.log(5);</span><br><span class="line">&#125;).then((arg)=&gt;&#123;console.log(arg)&#125;)</span><br><span class="line">console.log(6);</span><br></pre></td></tr></table></figure>
+
+<p>上述代码的输出结果：1,5,6,3,2</p>
+<h2 id="Q4：a是对象，什么时候-a-1-amp-amp-a-2-amp-amp-a-3为true"><a href="#Q4：a是对象，什么时候-a-1-amp-amp-a-2-amp-amp-a-3为true" class="headerlink" title="Q4：a是对象，什么时候 a==1&amp;&amp;a==2&amp;&amp;a==3为true?"></a>Q4：a是对象，什么时候 a==1&amp;&amp;a==2&amp;&amp;a==3为true?</h2><p><strong>小提示</strong>：相等符号，在左右两边类型不一致时，发生类型转换。<strong>对象转换时，首先调用toString()方法，后调用valueOf()方法。</strong></p>
+<h3 id="思路一：重写toString"><a href="#思路一：重写toString" class="headerlink" title="思路一：重写toString()"></a>思路一：重写toString()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;</span><br><span class="line">    num: 0,</span><br><span class="line">    toString: function()&#123;</span><br><span class="line">       return thus.num+=1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样一来，碰到a==1时，<strong>对象a调用toString()方法</strong>，返回1，于是a==1为true，同理，a==2，a==3均为true。</p>
+<h3 id="思路二：重写valueOf"><a href="#思路二：重写valueOf" class="headerlink" title="思路二：重写valueOf()"></a>思路二：重写valueOf()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;</span><br><span class="line">    num: 0,</span><br><span class="line">    valueOf: function()&#123;</span><br><span class="line">       return thus.num+=1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样一来，碰到a==1时，<strong>对象a调用valueOf()方法</strong>，返回1，于是a==1为true，同理，a==2，a==3均为true。</p>
 
       
 
@@ -232,6 +257,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">你不知道的JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -282,7 +318,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/17/my-first-blog/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/21/my-eighth-blog/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -296,18 +332,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/17/my-third-blog/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/21/my-ninth-blog/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          可视化大屏使用文档
+          JavaScript知识点汇总
         
       </div>
     </a>
   
   
-    <a href="/2019/09/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/11/20/my-seventh-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Node.js回调函数</div>
       <i class="icon-circle-right"></i>
     </a>
   
