@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Node.js回调函数 | 黄小鹿🦌</title>
+  <title>React的一些核心概念 | 黄小鹿🦌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言Node.js异步编程的直接体现就是回调。 但注意区别：异步编程依托于回调实现，但不能说回调后程序就异步化了。 回调函数在任务完成后就会被调用，Node使用了大量的回调函数，Node所有API都支持回调函数 回调函数一般作为函数的最后一个参数出现： 12function foo1(name, age, callback)&amp;#123;&amp;#125;function foo2(value, call">
-<meta name="keywords" content="Node.js">
+  <meta name="description" content="函数组件与class组件函数组件定义组件最简单的方式就是编写JavaScript函数： 12345678910111213function Welcome(props)&amp;#123;  //注意，函数组件中将props对象作为参数，所以取其属性时直接写props，而不是this.props  return &amp;lt;h1&amp;gt;hello,&amp;#123;props.name&amp;#125;&amp;lt;/h1&amp;g">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node.js回调函数">
-<meta property="og:url" content="http://yoursite.com/2019/11/20/my-seventh-blog/index.html">
+<meta property="og:title" content="React的一些核心概念">
+<meta property="og:url" content="http://yoursite.com/2019/11/22/my-tenth-blog/index.html">
 <meta property="og:site_name" content="黄小鹿🦌">
-<meta property="og:description" content="前言Node.js异步编程的直接体现就是回调。 但注意区别：异步编程依托于回调实现，但不能说回调后程序就异步化了。 回调函数在任务完成后就会被调用，Node使用了大量的回调函数，Node所有API都支持回调函数 回调函数一般作为函数的最后一个参数出现： 12function foo1(name, age, callback)&amp;#123;&amp;#125;function foo2(value, call">
+<meta property="og:description" content="函数组件与class组件函数组件定义组件最简单的方式就是编写JavaScript函数： 12345678910111213function Welcome(props)&amp;#123;  //注意，函数组件中将props对象作为参数，所以取其属性时直接写props，而不是this.props  return &amp;lt;h1&amp;gt;hello,&amp;#123;props.name&amp;#125;&amp;lt;/h1&amp;g">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-21T08:41:07.254Z">
+<meta property="og:updated_time" content="2019-11-26T10:58:58.829Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node.js回调函数">
-<meta name="twitter:description" content="前言Node.js异步编程的直接体现就是回调。 但注意区别：异步编程依托于回调实现，但不能说回调后程序就异步化了。 回调函数在任务完成后就会被调用，Node使用了大量的回调函数，Node所有API都支持回调函数 回调函数一般作为函数的最后一个参数出现： 12function foo1(name, age, callback)&amp;#123;&amp;#125;function foo2(value, call">
+<meta name="twitter:title" content="React的一些核心概念">
+<meta name="twitter:description" content="函数组件与class组件函数组件定义组件最简单的方式就是编写JavaScript函数： 12345678910111213function Welcome(props)&amp;#123;  //注意，函数组件中将props对象作为参数，所以取其属性时直接写props，而不是this.props  return &amp;lt;h1&amp;gt;hello,&amp;#123;props.name&amp;#125;&amp;lt;/h1&amp;g">
   
     <link rel="alternative" href="/atom.xml" title="黄小鹿🦌" type="application/atom+xml">
   
@@ -155,14 +154,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-my-seventh-blog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-my-tenth-blog" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Node.js回调函数
+      React的一些核心概念
     </h1>
   
 
@@ -173,59 +172,74 @@
 		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
 	</span>
 
-<a href="/2019/11/20/my-seventh-blog/" class="archive-article-date">
-  	<time datetime="2019-11-20T07:46:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+<a href="/2019/11/22/my-tenth-blog/" class="archive-article-date">
+  	<time datetime="2019-11-22T02:34:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Node.js<strong>异步编程</strong>的直接体现就是<strong>回调</strong>。</p>
-<p>但<strong>注意区别</strong>：异步编程依托于回调实现，但不能说回调后程序就异步化了。</p>
-<p><strong>回调函数在任务完成后就会被调用</strong>，Node使用了大量的回调函数，Node所有API都支持回调函数</p>
-<p>回调函数一般作为函数的最后一个参数出现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function foo1(name, age, callback)&#123;&#125;</span><br><span class="line">function foo2(value, callback1, callback2)&#123;&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="函数组件与class组件"><a href="#函数组件与class组件" class="headerlink" title="函数组件与class组件"></a>函数组件与class组件</h2><h3 id="函数组件"><a href="#函数组件" class="headerlink" title="函数组件"></a>函数组件</h3><p>定义组件最简单的方式就是编写JavaScript函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Welcome(props)&#123;</span><br><span class="line">  //注意，函数组件中将props对象作为参数，所以取其属性时直接写props，而不是this.props</span><br><span class="line">  return &lt;h1&gt;hello,&#123;props.name&#125;&lt;/h1&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const el = (</span><br><span class="line">  &lt;Welcome name=&apos;huang lulu&apos;/&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  el,</span><br><span class="line">  document.getElementById(&quot;root&quot;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
+<p>上述代码是通过JavaScript函数编写的一个有效的React组件，因为此函数接收<strong>唯一带有数据的”props”(代表属性)对象</strong>,并且返回一个React元素。</p>
+<p>这类组件被称为<strong>“函数组件”，因为其本质就是JavaScript函数</strong>。</p>
 <a id="more"></a>
-<h2 id="读取文件实例"><a href="#读取文件实例" class="headerlink" title="读取文件实例"></a>读取文件实例</h2><h3 id="阻塞代码实例"><a href="#阻塞代码实例" class="headerlink" title="阻塞代码实例"></a>阻塞代码实例</h3><p>等待文件读取完毕之后，再执行其他命令。</p>
-<p>此时使用<strong>readFileSync()方法</strong>，这是<strong>fs模块同步读取文件的方法</strong>，会产生阻塞效果。步骤如下：</p>
+
+<h3 id="class组件"><a href="#class组件" class="headerlink" title="class组件"></a>class组件</h3><p>除了用 JavaScript 函数写的函数组件之外，还可以用ES6的 class 来定义组件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Welcome extends React.Component&#123;</span><br><span class="line">  render() &#123; </span><br><span class="line">    //注意，通过props对象获取数据时，要写成this.props</span><br><span class="line">    return (&lt;h1&gt;hello,&#123;this.props.name&#125;&lt;/h1&gt;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const el = (</span><br><span class="line">  &lt;Welcome name=&apos;huang luluuuu&apos;/&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  el,</span><br><span class="line">  document.getElementById(&quot;root&quot;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>上述两个组件在 React 里是等效的。</p>
+<p><strong>注意：组件名称必须以大写字母开头</strong>。React 将以小写字母开头的组件视为原生 DOM 标签</p>
+<h2 id="封装一个可真正复用的Clock组件"><a href="#封装一个可真正复用的Clock组件" class="headerlink" title="封装一个可真正复用的Clock组件"></a>封装一个可真正复用的Clock组件</h2><p>此 Clock 组件内部需要设置一个计时器，并且需要每秒更新 UI。这不得不使用 state 或者生命周期函数等特性。因此，此组件需要采用 class组件写法。(但<strong>注意：</strong> React 16.8 新增了 Hook 特性。它可以在不编写class 的情况下使用 state 以及其他的 React 特性。)</p>
+<p>在具有许多组件的应用程序中，当组件被销毁时释放所占用的资源是非常重要的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">class Clock extends React.Component&#123;</span><br><span class="line">  constructor(props)&#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123;</span><br><span class="line">      date: new Date(),</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  //通过箭头函数确保 tick 内的 this 已被绑定。</span><br><span class="line">  //若不使用箭头 那么setInterval的参数要写成回调函数形式setInterval(() =&gt; this.tick(),1000)</span><br><span class="line">  tick = ()=&gt;&#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      date: new Date(),</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  //当 Clock 组件第一次被渲染到 DOM 中的时候，就为其设置一个计时器。这在 React 中被称为“挂载（mount）”。</span><br><span class="line">  componentDidMount()&#123;</span><br><span class="line">    this.timeId = setInterval(this.tick,1000);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  //当 DOM 中 Clock 组件被删除的时候，应该清除计时器。这在 React 中被称为“卸载（unmount）”。</span><br><span class="line">  componentWillUnmount()&#123;</span><br><span class="line">    clearInterval(this.timeId);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  render()&#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;hello world!&lt;/h1&gt;</span><br><span class="line">        &lt;h1&gt;It is:&#123;this.state.date.toLocaleTimeString()&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Clock /&gt;,</span><br><span class="line">  document.getElementById(&quot;root&quot;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><h3 id="React事件处理的语法"><a href="#React事件处理的语法" class="headerlink" title="React事件处理的语法"></a>React事件处理的语法</h3><p>React 元素的事件处理和 DOM 元素的很相似，但是有一点语法上的不同：</p>
 <ul>
-<li><p>创建一个文件input.txt，里面内容：黄小鹿🦌的博客地址：<a href="https://www.lucky-seven.cn/" target="_blank" rel="noopener">https://www.lucky-seven.cn/</a></p>
-</li>
-<li><p>创建main.js文件，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var fs = require(&apos;fs&apos;);</span><br><span class="line">var data = fs.readFileSync(&apos;/Users/huanglulu/Desktop/input.txt&apos;);</span><br><span class="line">//其中data获得的是文件内容的buffer（二进制）数据，想获得原字符串内容就要加toString()方法</span><br><span class="line">console.log(data.toString());</span><br><span class="line">console.log(&apos;程序执行完毕！&apos;);</span><br></pre></td></tr></table></figure>
-
-
-</li>
+<li>React 事件的命名采用小驼峰式(camleCase)，而不是纯小写</li>
+<li>使用 JSX 语法时，需要传入一个函数作为事件处理函数，而不是字符串</li>
 </ul>
-<ul>
-<li><p>输入<strong>node main.js</strong>得到如下结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">黄小鹿🦌的博客地址：https://www.lucky-seven.cn/</span><br><span class="line">程序执行完毕！</span><br></pre></td></tr></table></figure>
+<p>传统的 HTML ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onclick = &quot;activateLasers()&quot;&gt;</span><br><span class="line">   Activate Lasers</span><br><span class="line">&lt;/butto&gt;</span><br></pre></td></tr></table></figure>
 
+<p>在 React 中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick = &#123;activateLasers&#125;&gt;</span><br><span class="line">   Activate Lasers</span><br><span class="line">&lt;/butto&gt;</span><br></pre></td></tr></table></figure>
 
+<h3 id="事件处理函数中this的绑定"><a href="#事件处理函数中this的绑定" class="headerlink" title="事件处理函数中this的绑定"></a>事件处理函数中this的绑定</h3><p><strong>在JavaScript中，class的方法默认不会绑定 this。</strong>若不手动绑定事件处理函数内的this ，则事件处理函数内部的 this 取值为 undefined。</p>
+<p><strong>绑定事件处理函数内 this 的四种方法</strong>：</p>
+<p>法一：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Toggle extends React.Component&#123;</span><br><span class="line">  constructor(props)&#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123;</span><br><span class="line">      isToggleOn: true,</span><br><span class="line">    &#125;</span><br><span class="line">    //为了在回调中使用this，法一通过在构造函数中使用bind方法绑定this。若觉得此方法麻烦，可以参考法二和法三。</span><br><span class="line">    this.handleClick = this.handleClick.bind(this);</span><br><span class="line">  &#125;</span><br><span class="line">  handleClick()&#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      isToggleOn: !this.state.isToggleOn,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  render()&#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;button onClick = &#123;this.handleClick&#125;&gt;&#123;this.state.isToggleOn ? &apos;ON&apos; : &apos;OFF&apos;&#125;&lt;/button&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Toggle /&gt;,</span><br><span class="line">  document.getElementById(&quot;root&quot;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<h3 id="非阻塞代码实例"><a href="#非阻塞代码实例" class="headerlink" title="非阻塞代码实例"></a>非阻塞代码实例</h3><p>一边读取文件，一边执行其他命令。在文件读取完成后，<strong>将文件内容作为回调函数的参数返回</strong>。这样在执行代码时，就没有阻塞或者等待文件I/O操作。大大提高Node.js的性能，可以处理大量的并发请求。</p>
-<p>此时，使用<strong>readFile()方法异步读取文件</strong>。此方法采用<strong>错误优先机制，即回调函数的第一个参数为错误信息。</strong>如果在读取文件过程中发生错误，错误err对象就会输出错误信息；如果没发生错误，readFile跳过err对象的输出，文件内容就通过回调函数输出。具体步骤如下：</p>
-<ul>
-<li><p>创建一个文件input.txt，里面内容：黄小鹿🦌的博客地址：<a href="https://www.lucky-seven.cn/" target="_blank" rel="noopener">https://www.lucky-seven.cn/</a></p>
-</li>
-<li><p>创建main.js文件，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var fs = require(&apos;fs&apos;);</span><br><span class="line">fs.readFile(&apos;/Users/huanglulu/Desktop/input.txt&apos;,(err,data)=&gt;&#123;</span><br><span class="line">   if(err) return console.error(err);</span><br><span class="line">   //其中data获得的是文件内容的buffer（二进制）数据，想获得原字符串内容就要加toString()方法</span><br><span class="line">   console.log(data.toString());</span><br><span class="line">&#125;);</span><br><span class="line">console.log(&apos;程序执行完毕！&apos;);</span><br></pre></td></tr></table></figure>
+<p>法二：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Toggle extends React.Component&#123;</span><br><span class="line">  constructor(props)&#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123;</span><br><span class="line">      isToggleOn: true,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  //箭头函数语法保证了handleClick函数内绑定了this</span><br><span class="line">  handleClick = ()=&gt; &#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      isToggleOn: !this.state.isToggleOn,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  render()&#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;button onClick = &#123;this.handleClick&#125;&gt;&#123;this.state.isToggleOn ? &apos;ON&apos; : &apos;OFF&apos;&#125;&lt;/button&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Toggle /&gt;,</span><br><span class="line">  document.getElementById(&quot;root&quot;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
+<p>法三：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Toggle extends React.Component&#123;</span><br><span class="line">  constructor(props)&#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123;</span><br><span class="line">      isToggleOn: true,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  handleClick()&#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      isToggleOn: !this.state.isToggleOn,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  render()&#123;</span><br><span class="line">    return (</span><br><span class="line">        // 此语法也可以确保handleClick函数内的this已被绑定，若需要传递参数，则需要采用此方法。</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;button onClick = &#123;()=&gt;this.handleClick()&#125;&gt;&#123;this.state.isToggleOn ? &apos;ON&apos; : &apos;OFF&apos;&#125;&lt;/button&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Toggle /&gt;,</span><br><span class="line">  document.getElementById(&quot;root&quot;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<ul>
-<li><p>输入<strong>node main.js</strong>得到如下结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">程序执行完毕！</span><br><span class="line">黄小鹿🦌的博客地址：https://www.lucky-seven.cn/</span><br></pre></td></tr></table></figure>
+<p>法四：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Toggle extends React.Component&#123;</span><br><span class="line">  constructor(props)&#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123;</span><br><span class="line">      isToggleOn: true,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  handleClick()&#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      isToggleOn: !this.state.isToggleOn,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  render()&#123;</span><br><span class="line">    return (</span><br><span class="line">        // 法四通过事件处理函数直接 bind 绑定 this (Function.prototype.bind)。若需要传递参数，则需要采用此方法。</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;button onClick = &#123;this.handleClick.bind(this)&#125;&gt;&#123;this.state.isToggleOn ? &apos;ON&apos; : &apos;OFF&apos;&#125;&lt;/button&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Toggle /&gt;,</span><br><span class="line">  document.getElementById(&quot;root&quot;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>从以上两个实例，我们了解了阻塞与非阻塞调用的不同。第一个实例在等待文件读取完后才执行程序。第二个实例不需要等待文件读取完，这样就可以在读取文件的同时执行接下来的代码，大大提高了程序的性能。</p>
-<p>因此，<strong>阻塞是按顺序执行的，而非阻塞是不需要按顺序的</strong>，所以如果需要处理回调函数的参数，我们就需要写在回调函数内。</p>
+<h3 id="向事件处理程序传递参数"><a href="#向事件处理程序传递参数" class="headerlink" title="向事件处理程序传递参数"></a>向事件处理程序传递参数</h3><p>通常，我们会遇到为事件处理函数传递额外的参数的情况。下面两种方法都可以向事件处理函数传递参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick = &#123;(e)=&gt;this.handleClick(id, e)&#125;&gt;Delete Row</span><br><span class="line">&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick = &#123;this.handleClick.bind(this, id)&#125;&gt;Delete Row</span><br><span class="line">&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在这两种情况下，React 的<strong>事件对象 e 会被作为第二个参数传递</strong>。如果<strong>通过箭头函数的方式，事件对象 e 必须显示地进行传递</strong>。而<strong>通过 bind 方法，事件对象 e 以及更多参数将被隐式地进行传递</strong>。</p>
+<h2 id="列表-amp-key"><a href="#列表-amp-key" class="headerlink" title="列表 &amp; key"></a>列表 &amp; key</h2><h3 id="基础列表组件"><a href="#基础列表组件" class="headerlink" title="基础列表组件"></a>基础列表组件</h3><p>构造一个1到5的项目符号列表组件，此组件接收一个数组并输出一个元素列表。代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function NumberList (props)&#123;</span><br><span class="line">  const number = props.number;</span><br><span class="line">  const listItem = number.map((item) =&gt; &#123;</span><br><span class="line">    return (&lt;li&gt;&#123;item&#125;&lt;/li&gt;)</span><br><span class="line">  &#125;);</span><br><span class="line">  return (</span><br><span class="line">    &lt;ul&gt;&#123;listItem&#125;&lt;/ul&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line">const number = [1,2,3,4,5];</span><br><span class="line">ReactDOM.render(</span><br><span class="line">&lt;NumberList number = &#123;number&#125; /&gt;,document.getElementById(&quot;root&quot;))</span><br></pre></td></tr></table></figure>
+
+<p>运行这段代码，会看到一个警告：a key should be provided for list items。意思就是当你创建一个元素时，<strong>必须包括一个特殊的 key 属性。</strong></p>
+<h3 id="key"><a href="#key" class="headerlink" title="key"></a>key</h3><p>key帮助 <strong>React</strong> 识别哪些元素改变了，比如被添加或删除。因此我们<strong>需要给数组中的每一个元素赋予一个确定的标识</strong>。</p>
+<p><strong>key 会传递信息给 React ，但不会传递给你的组件</strong>。因此若组件中需要使用 key 的值，则需要用其他属性显示传递这个值（即，在组件中用props.key取不到 key 值）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function NumberList(props)&#123;</span><br><span class="line">  const number = props.number;</span><br><span class="line">  const listItem = number.map((item) =&gt; &#123;</span><br><span class="line">    return (&lt;li key = &#123;item.toString()&#125;&gt;&#123;item&#125;&lt;/li&gt;)</span><br><span class="line">  &#125;);</span><br><span class="line">  return (</span><br><span class="line">    &lt;ul&gt;&#123;listItem&#125;&lt;/ul&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line">const number = [1,22,3,4,55];</span><br><span class="line">ReactDOM.render(&lt;NumberList number = &#123;number&#125;/&gt;,document.getElementById(&quot;root&quot;))</span><br></pre></td></tr></table></figure>
+
+<p><strong>一个元素的 key 最好是这个元素在列表中拥有的一个独一无二的字符串。</strong>通常，我们使用<strong>数据中的 id 来作为元素的 key</strong>。当元素没有确定 id 的时候，万不得已你可以使用元素索引 index 作为 key（最好不要使用，因为列表项目的顺序很有可能改变）</p>
+<h3 id="用key提取组件"><a href="#用key提取组件" class="headerlink" title="用key提取组件"></a>用key提取组件</h3><p><strong>元素的key只有放在就近的数组上下文中才有意义</strong>。比如当我们把上述代码的listItem变量抽取成一个由ListItem组成的复合组件的时候，<strong>key应该保留在组件ListItem上</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function ListItem(props)&#123;</span><br><span class="line">  const value = props.value;</span><br><span class="line">  return (</span><br><span class="line">    // 正确！这里不需要指定 key：</span><br><span class="line">    &lt;li&gt;&#123;value&#125;&lt;/li&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function NumberList(props)&#123;</span><br><span class="line">  const number = props.number;</span><br><span class="line">  const listItem = number.map((item) =&gt; &#123;</span><br><span class="line">    // 正确！key 应该在数组的上下文中被指定</span><br><span class="line">    return (&lt;ListItem key = &#123;item.toString()&#125; value=&#123;item&#125; /&gt;)</span><br><span class="line">  &#125;)</span><br><span class="line">  return (</span><br><span class="line">    &lt;ul&gt;&#123;listItem&#125;&lt;/ul&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line">const number = [1,22,3,4,55];</span><br><span class="line">ReactDOM.render(&lt;NumberList number = &#123;number&#125;/&gt;,document.getElementById(&quot;root&quot;))</span><br></pre></td></tr></table></figure>
+
+<h3 id="key-只是在兄弟节点之间必须唯一"><a href="#key-只是在兄弟节点之间必须唯一" class="headerlink" title="key 只是在兄弟节点之间必须唯一"></a>key 只是在兄弟节点之间必须唯一</h3><p>数组元素中使用的 key 在其兄弟节点之间应该是独一无二的。然而，它们不需要是全局唯一的。<strong>当生成两个不同的数组时，我们可以使用相同的 key 值</strong>。</p>
 
       
 
@@ -265,17 +279,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -326,7 +329,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/20/my-seventh-blog/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/22/my-tenth-blog/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -340,18 +343,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/21/my-eighth-blog/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JavaScript难题汇总一
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/20/my-sixth-blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Node.js 创建第一个应用</div>
+    <a href="/2019/11/21/my-ninth-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript知识点汇总</div>
       <i class="icon-circle-right"></i>
     </a>
   
