@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: React | 黄小鹿🦌</title>
+  <title>Python函数式编程 | 黄小鹿🦌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="黄小鹿🦌">
-<meta property="og:url" content="http://yoursite.com/tags/React/index.html">
+  <meta name="description" content="高阶函数map/reducePython内建了 map() 和 reduce() 函数 map 函数接收两个参数，一个是函数，一个是可迭代对象 Iterable 。map 将传入的函数依次作用到序列的每个元素，并把结果作为新的 Iterator 返回。 举例： 123def f(x):   return x*xr = map(f,[1,2,4,5])  list(r) 的结果就是[1,4,16,2">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python函数式编程">
+<meta property="og:url" content="http://yoursite.com/2019/12/10/my-eleventh-blog/index.html">
 <meta property="og:site_name" content="黄小鹿🦌">
+<meta property="og:description" content="高阶函数map/reducePython内建了 map() 和 reduce() 函数 map 函数接收两个参数，一个是函数，一个是可迭代对象 Iterable 。map 将传入的函数依次作用到序列的每个元素，并把结果作为新的 Iterator 返回。 举例： 123def f(x):   return x*xr = map(f,[1,2,4,5])  list(r) 的结果就是[1,4,16,2">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-10T09:52:13.270Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="黄小鹿🦌">
+<meta name="twitter:title" content="Python函数式编程">
+<meta name="twitter:description" content="高阶函数map/reducePython内建了 map() 和 reduce() 函数 map 函数接收两个参数，一个是函数，一个是可迭代对象 Iterable 。map 将传入的函数依次作用到序列的每个元素，并把结果作为新的 Iterator 返回。 举例： 123def f(x):   return x*xr = map(f,[1,2,4,5])  list(r) 的结果就是[1,4,16,2">
   
     <link rel="alternative" href="/atom.xml" title="黄小鹿🦌" type="application/atom+xml">
   
@@ -150,61 +155,225 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-my-eleventh-blog" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/11/22/my-tenth-blog/" class="archive-article-date">
-  	<time datetime="2019-11-22T02:34:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/22/my-tenth-blog/">React的一些核心概念</a>
+    <h1 class="article-title" itemprop="name">
+      Python函数式编程
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv"  class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+<a href="/2019/12/10/my-eleventh-blog/" class="archive-article-date">
+  	<time datetime="2019-12-10T08:32:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><h3 id="map-reduce"><a href="#map-reduce" class="headerlink" title="map/reduce"></a>map/reduce</h3><p>Python内建了 <strong>map()</strong> 和 <strong>reduce()</strong> 函数</p>
+<p><strong>map</strong> 函数接收两个参数，一个是函数，一个是可迭代对象 <strong>Iterable</strong> 。<strong>map</strong> 将传入的函数依次作用到序列的每个元素，并把结果作为新的 <strong>Iterator</strong> 返回。</p>
+<p>举例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def f(x):</span><br><span class="line">   return x*x</span><br><span class="line">r = map(f,[1,2,4,5])</span><br></pre></td></tr></table></figure>
+
+<p><strong>list(r)</strong> 的结果就是[1,4,16,25]</p>
+<a id="more"></a>
+
+<p><strong>reduce</strong> 把一个函数作用在一个序列 <strong>[x1,x2,x3,…]</strong> ,传入的函数必须接收两个参数，<strong>reduce</strong> 把结果和序列的下一个元素做累积计算。</p>
+<p>举例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def f(x,y):</span><br><span class="line">   return x*10+y</span><br><span class="line">res = reduce(f,[1,3,5,5,6])</span><br></pre></td></tr></table></figure>
+
+<p><strong>res</strong> 的结果为13556</p>
+<p>练习：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def str2float(s):</span><br><span class="line">    part=s.split(&apos;.&apos;)</span><br><span class="line">    L1=part[0]</span><br><span class="line">    L2=part[1]</span><br><span class="line">    digits = &#123;&apos;0&apos;: 0, &apos;1&apos;: 1, &apos;2&apos;: 2, &apos;3&apos;: 3, &apos;4&apos;: 4, &apos;5&apos;: 5, &apos;6&apos;: 6, &apos;7&apos;: 7, &apos;8&apos;: 8, &apos;9&apos;: 9&#125;</span><br><span class="line">    def char2num(s):</span><br><span class="line">       return digits[s]</span><br><span class="line">    def fn(x, y):</span><br><span class="line">       return x * 10 + y</span><br><span class="line">    float_num = reduce(fn,map(char2num,L1)) + reduce(fn,map(char2num,L2))/(10**len(L2))</span><br><span class="line">    return float_num</span><br></pre></td></tr></table></figure>
+
+<p>调用 <strong>str2float(‘123.456’)</strong> 就输出结果 <strong>123.456</strong></p>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><p>Python内建的 <strong>fliter</strong> 函数用于过滤序列</p>
+<p>和 map() 类似，<strong>filter()</strong> 也接收一个函数和序列。和 map()不同的是，<strong>filter()</strong> 把传入的函数依次作用于每个元素，然后根据返回值<strong>是 True 还是 False</strong> 决定保留还是丢弃该元素。</p>
+<p>举例：在一个 list 中，删掉偶数，只保留奇数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def is_odd(n):</span><br><span class="line">       return n % 2 ==1</span><br><span class="line">li=list(filter(is_odd,[3,6,5,7,9,10]))</span><br></pre></td></tr></table></figure>
+
+<p>结果：[3, 5, 7, 9]</p>
+<p>注意：filter() 函数返回的<strong>是一个 Iterator</strong> ，也就是一个<strong>惰性序列</strong>，所以要强迫 filter() 完成计算结果，需要用 list() 函数获得所有结果并返回 list 。</p>
+<h3 id="sorted"><a href="#sorted" class="headerlink" title="sorted"></a>sorted</h3><p>Python 内置的sorted 函数可以对 list 进行排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sorted([2,0,9,89,82,3,4]) #[0, 2, 3, 4, 9, 82, 89]</span><br></pre></td></tr></table></figure>
+
+<p>此外，sorted() 也是一个高阶函数，可以接收一个 <strong>key 函数(此函数的参数为每一个序列的元素)</strong>来实现自定义的排序：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sorted([-1,-99,6,8,2,3,0,-456],key=abs) #根据元素的绝对值进行排序 结果为[0, -1, 2, 3, 6, 8, -99, -456]</span><br><span class="line">sorted([&apos;Abs&apos;,&apos;apple&apos;,&apos;Moon&apos;,&apos;sun&apos;,&apos;site&apos;,&apos;Python&apos;],key=str.lower) #先将元素转换成小写，然后根据转换后的元素对原有的进行排序，结果为[&apos;Abs&apos;, &apos;apple&apos;, &apos;Moon&apos;, &apos;Python&apos;, &apos;site&apos;, &apos;sun&apos;]</span><br><span class="line">sorted([&apos;Abs&apos;,&apos;apple&apos;,&apos;Moon&apos;,&apos;sun&apos;,&apos;site&apos;,&apos;Python&apos;],key=str.lower,reverse=True) #反向排序，结果为[&apos;sun&apos;, &apos;site&apos;, &apos;Python&apos;, &apos;Moon&apos;, &apos;apple&apos;, &apos;Abs&apos;]</span><br></pre></td></tr></table></figure>
+
+<p>举例：有一个 list ，其值为 L = [(‘Bob’, 75), (‘Adam’, 92), (‘Bart’, 66), (‘Lisa’, 88)]，其中每一个元素是一个 tuple 表示学生名字和成绩</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">L = [(&apos;Bob&apos;, 75), (&apos;Adam&apos;, 92), (&apos;Bart&apos;, 66), (&apos;Lisa&apos;, 88)]</span><br><span class="line">def by_name(t):</span><br><span class="line">   return t[0]</span><br><span class="line">def by_score(t):</span><br><span class="line">   return t[1]</span><br><span class="line">L1=sorted(L,key=by_name) # 根据姓名排序</span><br><span class="line">print(L1) #[(&apos;Adam&apos;, 92), (&apos;Bart&apos;, 66), (&apos;Bob&apos;, 75), (&apos;Lisa&apos;, 88)]</span><br><span class="line">L2=sorted(L,key= by_score) # 根据分数排序</span><br><span class="line">print(L2) #[(&apos;Bart&apos;, 66), (&apos;Bob&apos;, 75), (&apos;Lisa&apos;, 88), (&apos;Adam&apos;, 92)]</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechatpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">React</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/10/my-eleventh-blog/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/12/10/my-twelveth-blog/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Python高级特性
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/11/22/my-tenth-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React的一些核心概念</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -239,9 +408,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
