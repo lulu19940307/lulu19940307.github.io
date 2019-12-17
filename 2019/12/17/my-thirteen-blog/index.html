@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>黄小鹿🦌</title>
+  <title>面向对象编程 | 黄小鹿🦌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="黄小鹿🦌">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="类和实例在Python中，定义类是通过 class 关键字： 12class Student(object):   pass  class 后面紧接着是类名，即 Student，类名通常是大写开头的单词，紧接着是 (object)，表示该类是从哪个类继承下来的。通常，如果没有合适的继承类，就使用 object 类，这是所有类最终都会继承的类。 定义好了 Student 类，就可以根据 Studen">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象编程">
+<meta property="og:url" content="http://yoursite.com/2019/12/17/my-thirteen-blog/index.html">
 <meta property="og:site_name" content="黄小鹿🦌">
+<meta property="og:description" content="类和实例在Python中，定义类是通过 class 关键字： 12class Student(object):   pass  class 后面紧接着是类名，即 Student，类名通常是大写开头的单词，紧接着是 (object)，表示该类是从哪个类继承下来的。通常，如果没有合适的继承类，就使用 object 类，这是所有类最终都会继承的类。 定义好了 Student 类，就可以根据 Studen">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-17T11:39:10.794Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="黄小鹿🦌">
+<meta name="twitter:title" content="面向对象编程">
+<meta name="twitter:description" content="类和实例在Python中，定义类是通过 class 关键字： 12class Student(object):   pass  class 后面紧接着是类名，即 Student，类名通常是大写开头的单词，紧接着是 (object)，表示该类是从哪个类继承下来的。通常，如果没有合适的继承类，就使用 object 类，这是所有类最终都会继承的类。 定义好了 Student 类，就可以根据 Studen">
   
     <link rel="alternative" href="/atom.xml" title="黄小鹿🦌" type="application/atom+xml">
   
@@ -150,21 +155,24 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-my-thirteen-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-my-thirteen-blog" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/17/my-thirteen-blog/">面向对象编程</a>
+    <h1 class="article-title" itemprop="name">
+      面向对象编程
     </h1>
   
 
         
         
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv"  class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
 <a href="/2019/12/17/my-thirteen-blog/" class="archive-article-date">
   	<time datetime="2019-12-17T09:59:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-17</time>
 </a>
@@ -178,430 +186,85 @@
 
 <p><strong>class 后面紧接着是类名，即 Student，类名通常是大写开头的单词，紧接着是 (object)，表示该类是从哪个类继承下来的。通常，如果没有合适的继承类，就使用 object 类，这是所有类最终都会继承的类</strong>。</p>
 <p>定义好了 Student 类，就可以根据 Student 类创建出 Student 的实例，<strong>创建实例是通过类名+()实现的</strong>：bart = Student()</p>
-        
-          <a class="article-more-a" href="/2019/12/17/my-thirteen-blog/#more">more >></a>
-        
-      
+<a id="more"></a>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<h3 id="实例变量绑定属性"><a href="#实例变量绑定属性" class="headerlink" title="实例变量绑定属性"></a>实例变量绑定属性</h3><p>创建好实例以后，可以自由地<strong>给一个实例变量绑定属性</strong>，比如，给实例 bart 绑定一个 name 属性：如 bart.name = ‘huanglulu’</p>
+<p>由于类可以起到模版的作用，因此，<strong>在创建实例的时候，可以把一些认为必须绑定的属性强制填写进去</strong>。通过定义一个特殊的 <code>__init__</code> 方法，在创建实例的时候，就把 name，score 等属性绑上去：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    def __init__(self,name,score):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.score = score</span><br></pre></td></tr></table></figure>
 
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/17/my-thirteen-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-my-twelveth-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/10/my-twelveth-blog/">Python高级特性</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/12/10/my-twelveth-blog/" class="archive-article-date">
-  	<time datetime="2019-12-10T10:08:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h2><p>如果给定一个 list 或者 tuple 或者 dict 或者 str 或者 set 或者 generator，可以<strong>通过 for 循环来遍历</strong>这个 list 或者 tuple ，这种遍历成为迭代（Iteration）。在Python中，<strong>迭代是通过 for … in 来实现</strong>。</p>
-<p>字典 dict 的迭代：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">dict=&#123;&apos;name&apos;:&apos;hll&apos;,&apos;age&apos;:18&#125;</span><br><span class="line">for key in dict: #默认情况下，dict 迭代的是 key</span><br><span class="line">   print(key)</span><br><span class="line">for value in dict.values(): #此时迭代的是 value</span><br><span class="line">   print(value)</span><br><span class="line">for k,v in dict.items():</span><br><span class="line">   print(k,v) #同时迭代 key 和 value</span><br></pre></td></tr></table></figure>
-
-<p>列表 list 的迭代：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">li = [(1,2),(2,4),(3,9)]</span><br><span class="line">for i in li:</span><br><span class="line">   print(i) #迭代的是列表的元素值 (1,2) (2,4) (3,9)</span><br><span class="line">for i, value in enumerate(li):</span><br><span class="line">   print(i,value) #同时迭代列表的索引和元素本身 0 (1,2) 1 (2,4) 2 (3,9)</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/12/10/my-twelveth-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/10/my-twelveth-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-my-eleventh-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/10/my-eleventh-blog/">Python函数式编程</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/12/10/my-eleventh-blog/" class="archive-article-date">
-  	<time datetime="2019-12-10T08:32:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><h3 id="map-reduce"><a href="#map-reduce" class="headerlink" title="map/reduce"></a>map/reduce</h3><p>Python内建了 <strong>map()</strong> 和 <strong>reduce()</strong> 函数</p>
-<p><strong>map</strong> 函数接收两个参数，一个是函数，一个是可迭代对象 <strong>Iterable</strong> 。<strong>map</strong> 将传入的函数依次作用到序列的每个元素，并把结果作为新的 <strong>Iterator</strong> 返回。</p>
-<p>举例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def f(x):</span><br><span class="line">   return x*x</span><br><span class="line">r = map(f,[1,2,4,5])</span><br></pre></td></tr></table></figure>
-
-<p><strong>list(r)</strong> 的结果就是[1,4,16,25]</p>
-        
-          <a class="article-more-a" href="/2019/12/10/my-eleventh-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/10/my-eleventh-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-my-tenth-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/22/my-tenth-blog/">React的一些核心概念</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/11/22/my-tenth-blog/" class="archive-article-date">
-  	<time datetime="2019-11-22T02:34:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="函数组件与class组件"><a href="#函数组件与class组件" class="headerlink" title="函数组件与class组件"></a>函数组件与class组件</h2><h3 id="函数组件"><a href="#函数组件" class="headerlink" title="函数组件"></a>函数组件</h3><p>定义组件最简单的方式就是编写JavaScript函数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Welcome(props)&#123;</span><br><span class="line">  //注意，函数组件中将props对象作为参数，所以取其属性时直接写props，而不是this.props</span><br><span class="line">  return &lt;h1&gt;hello,&#123;props.name&#125;&lt;/h1&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const el = (</span><br><span class="line">  &lt;Welcome name=&apos;huang lulu&apos;/&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  el,</span><br><span class="line">  document.getElementById(&quot;root&quot;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-<p>上述代码是通过JavaScript函数编写的一个有效的React组件，因为此函数接收<strong>唯一带有数据的”props”(代表属性)对象</strong>,并且返回一个React元素。</p>
-<p>这类组件被称为<strong>“函数组件”，因为其本质就是JavaScript函数</strong>。</p>
-        
-          <a class="article-more-a" href="/2019/11/22/my-tenth-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">React</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/22/my-tenth-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-my-ninth-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/21/my-ninth-blog/">JavaScript知识点汇总</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/11/21/my-ninth-blog/" class="archive-article-date">
-  	<time datetime="2019-11-21T07:24:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。"><a href="#五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。" class="headerlink" title="五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。"></a>五种基本数据类型：number、string、undefined、null、boolean。存在于栈内存中。</h3><p>除了null类型以外，其他基本数据类型均可以用<strong>typeof判断</strong>。如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var a = null;</span><br><span class="line">typeof(a)</span><br></pre></td></tr></table></figure>
-
-<p>以上代码的结果为：object</p>
-        
-          <a class="article-more-a" href="/2019/11/21/my-ninth-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/21/my-ninth-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-my-eighth-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/21/my-eighth-blog/">JavaScript难题汇总一</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/11/21/my-eighth-blog/" class="archive-article-date">
-  	<time datetime="2019-11-21T05:59:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Q1：-“1”-”2”-”3”-map-parseInt-为什么返回-1-NaN-NaN"><a href="#Q1：-“1”-”2”-”3”-map-parseInt-为什么返回-1-NaN-NaN" class="headerlink" title="Q1：[“1”,”2”,”3”].map(parseInt)为什么返回[1,NaN,NaN]"></a>Q1：[“1”,”2”,”3”].map(parseInt)为什么返回[1,NaN,NaN]</h2><h3 id="parseInt基本用法"><a href="#parseInt基本用法" class="headerlink" title="parseInt基本用法"></a>parseInt基本用法</h3><p><strong>定义：</strong>1、parseInt函数可解析一个字符串，并返回一个整数</p>
-<p><strong>语法：</strong> parseInt(string,radix)</p>
-<p><strong>说明：</strong> </p>
+<p><strong>注意：</strong></p>
 <ul>
-<li>1、string：必需，需要被解析的字符串；</li>
-<li>2、radix：可选，表示要解析的数字的基数，该值介于2～36之间<ul>
-<li>如果省略该参数或其值为0，则数字将以10为基础进行解析</li>
-<li>如果它以”ox”或者”Ox”开头，将以16为基数</li>
-<li>当radix的值为0，或没有设置该参数时，parseInt()会根据string来判断数字的基数</li>
+<li>特殊方法<code>__init__</code>前后分别有两个下划线！</li>
+<li>特殊方法<code>__init__</code>的<strong>第一个参数永远是 self，表示创建的实例本身</strong>。因此，在<code>__init__</code>方法内部，就可以把各种属性绑定到self，因为 self 就指向创建的实例本身。</li>
+<li>有了<code>__init__</code>方法，在创建实例的时候，就不能传入空的参数了，<strong>必须传入与<code>__init__</code>方法匹配的参数，但 self 不需要传</strong>，Python解释器自己会把实例变量传进去。</li>
 </ul>
-</li>
-</ul>
-<p><strong>注：</strong>parseInt(“ “)-&gt;NaN，Number(“ “)-&gt;0</p>
-        
-          <a class="article-more-a" href="/2019/11/21/my-eighth-blog/#more">more >></a>
-        
+<h3 id="数据封装"><a href="#数据封装" class="headerlink" title="数据封装"></a>数据封装</h3><p>对于实例本身拥有的数据，我们没必要从外面的函数去访问它们，<strong>可以直接在 Student 类的内部定义访问数据的函数，这样，就把“数据”给封装起来了</strong>。这些<strong>封装数据的函数称之为“类的方法”</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">   def __init__(self, name, score):</span><br><span class="line">      self.name = name</span><br><span class="line">      self.score = score</span><br><span class="line">   </span><br><span class="line">   def print_score(self):</span><br><span class="line">      print(&apos;%s: %s&apos; % (self.name, self.score))</span><br><span class="line">      </span><br><span class="line">bart=Student(&apos;huanglulu&apos;, 99)</span><br><span class="line">bart.print_score() # huanglulu: 99</span><br></pre></td></tr></table></figure>
+
+<h2 id="访问限制"><a href="#访问限制" class="headerlink" title="访问限制"></a>访问限制</h2><p>在 class 内部，可以有属性和方法，而外部代码可以通过直接调用实例变量的方法来操作数据，这样，就隐藏了内部的复杂逻辑。但是，从前面的Student类的定义来看，外部代码还是可以自由地修改一个实例的 name 和 score 属性。</p>
+<p><strong>要让内部属性不被外部访问，可以在属性的名称前加上两个下划线 <code>__</code></strong>。在python中，实例的变量如果以 <code>__</code> 开头,就变成了一个<strong>私有变量</strong>，<strong>只有内部可以访问，外部不能访问</strong>。所以，把 Student 作如下改动：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">   def __init__(self, name, score):</span><br><span class="line">      self.__name = name</span><br><span class="line">      self.__score = score</span><br><span class="line">   </span><br><span class="line">   def print_score(self):</span><br><span class="line">      print(&apos;%s: %s&apos; % (self.__name, self.__score))</span><br><span class="line">      </span><br><span class="line">bart=Student(&apos;huanglulu&apos;, 99)</span><br><span class="line">bart.print_score() # huanglulu: 99</span><br></pre></td></tr></table></figure>
+
+<p>改动后，对于外部代码来说没什么改动，但是此时已经无法从外部访问<strong>实例变量.<strong>name 和 实例变量.</strong>score</strong>了</p>
+<p>但如果外部代码想要获取或者修改name和score，应该怎么办呢？此时可以在Student 类内部增加 get_name，get_score，set_name 和 set_score这些方法。<strong>与外部代码直接修改属性相比，set_score方法可以对参数进行检查，避免传入无效参数</strong>。</p>
+<p>在python中，<strong>变量名类似 <code>__xxx__</code> 的，也就是以双下划线开头，并且以双下划线结尾的，是特殊变量，特殊变量是可以直接访问的</strong>，不是 private 变量。</p>
+<p>有些时候，你会看到<strong>以一个下划线开头的实例变量名，比如 <code>_name</code>，这样的实例变量外部是可以访问的</strong>，但是，按照约定俗成的规定，当你看到这样的变量时，意思就是，“虽然我可以被访问，但是，请把我视为私有变量，不要随意访问”。</p>
+<p>练习：把Student对象的gender字段对外隐藏起来，用get_gender()和set_gender()代替，并检查参数有效性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    def __init__(self, name, gender):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.__gender = gender</span><br><span class="line"></span><br><span class="line">    def set_gender(self, gender):</span><br><span class="line">        if gender != &apos;male&apos; and gender != &apos;female&apos;:</span><br><span class="line">            raise ValueError(&apos;gender must be male or female&apos;)</span><br><span class="line">        self.__gender = gender</span><br><span class="line"></span><br><span class="line">    def get_gender(self):</span><br><span class="line">        return self.__gender</span><br><span class="line"></span><br><span class="line">bart = Student(&apos;Bart&apos;, &apos;male&apos;)</span><br><span class="line"># print(bart.__gender) # gender是私有变量 外部无法访问 直接报错</span><br><span class="line"># 但其实可以通过bart._Student__gender访问</span><br><span class="line"># 这是因为Python解释器对外把__gender变量改成了_Student__gender</span><br><span class="line">print(bart._Student__gender) # male</span><br><span class="line"></span><br><span class="line">print(bart.get_gender()) # male</span><br></pre></td></tr></table></figure>
+
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>当定义一个 class 的时候，可以从某个现有的class继承，新的class称为子类（Subclass），而被继承的class称为基类、父类或超类（Base class、Super class）。</p>
+<p>比如，我们已经编写了一个名为 Animal 的 class，有一个 run()方法可以直接打印：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class Animal(object):</span><br><span class="line">    def run(self):</span><br><span class="line">        print(&apos;Animal is running...&apos;)</span><br></pre></td></tr></table></figure>
+
+<p>当我们需要编写 Dog 和 Cat 类的时候，就可以直接从 Animal 继承:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Dog(Animal):</span><br><span class="line">    pass</span><br><span class="line">class Cat(Animal):</span><br><span class="line">    pass</span><br><span class="line">    </span><br><span class="line">dog = Dog()</span><br><span class="line">dog.run() # Animal is running...</span><br><span class="line"></span><br><span class="line">cat = Cat()</span><br><span class="line">cat.run() # Animal is running...</span><br></pre></td></tr></table></figure>
+
+<p>对于Dog来说，Animal就是它的父类，对于Animal来说，Dog就是它的子类。Cat和Dog类似。</p>
+<p>继承的好处：<strong>子类获得了父类的全部功能</strong>，如上例中的 Dog 和 Cat 啥事也没干，就自动获得了 run 方法。且<strong>可以对父类的功能进行修改</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Dog(Animal):</span><br><span class="line">    def run(self):</span><br><span class="line">        print(&apos;Dog is running&apos;)</span><br><span class="line">class Cat(Animal):</span><br><span class="line">    def run(self):</span><br><span class="line">        print(&apos;Cat is running&apos;)</span><br><span class="line">    </span><br><span class="line">dog = Dog()</span><br><span class="line">dog.run() # Dog is running...</span><br><span class="line"></span><br><span class="line">cat = Cat()</span><br><span class="line">cat.run() # Cat is running...</span><br></pre></td></tr></table></figure>
+
+<p>上述代码表明：当子类和父类都存在相同的run()方法时，我们说，<strong>子类的 run() 覆盖了父类的 run()</strong>，在代码运行的时候，总是会调用子类的run()。</p>
+<h2 id="实例属性和类属性"><a href="#实例属性和类属性" class="headerlink" title="实例属性和类属性"></a>实例属性和类属性</h2><h3 id="实例属性"><a href="#实例属性" class="headerlink" title="实例属性"></a>实例属性</h3><p>由于 python 是动态语言，根据类创建的实例可以任意绑定属性。给<strong>实例绑定属性</strong>的方法：<strong>通过实例变量或者是通过 self 变量</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">   def __init__(self, name):</span><br><span class="line">       self.name = name # 通过 self 绑定实例属性</span><br><span class="line">    </span><br><span class="line">s=Student(&apos;Bob&apos;)</span><br><span class="line">s.score # 通过实例变量绑定属性</span><br></pre></td></tr></table></figure>
+
+<h3 id="类属性"><a href="#类属性" class="headerlink" title="类属性"></a>类属性</h3><p>但是，如果 Student 类本身需要绑定一个属性呢？可以<strong>直接在 class 中定义属性，这种属性是类属性，归 Student 类所有</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    name = &apos;Student&apos;</span><br><span class="line">s = Student() # 创建实例s</span><br><span class="line">print(s.name) # 实例属性没有name属性，故继续查找class的name属性 结果为Student</span><br><span class="line">print(Student.name) #打印类的name属性</span><br><span class="line">s.name = &apos;huanglulu&apos; # 绑定实例属性</span><br><span class="line">print(s.name) # 由于实例属性优先级比类属性高，因此，它会屏蔽掉class的name属性 结果为huanglulu</span><br><span class="line">print(Student.name) # 类属性并未消失，故以还是能访问 结果为Student</span><br><span class="line">del s.name # 删除实例的name属性</span><br><span class="line">print(s.name) # 再次调用s.name，由于实例的name属性没有找到，类的name属性就显示出来了 结果为Student</span><br></pre></td></tr></table></figure>
+
+<p>所以，在编写程序的时候，<strong>千万不要对实例属性和类属性使用相同的名字</strong>，因为相同名称的实例属性将屏蔽掉类属性，但是当你删除实例属性后，再使用相同的名称，访问到的将是类属性。</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechatpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -612,7 +275,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">你不知道的JS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -621,16 +284,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/21/my-eighth-blog/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/17/my-thirteen-blog/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/10/my-twelveth-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python高级特性</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -651,340 +373,14 @@
 
 
 
-
-  
-    <article id="post-my-seventh-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/my-seventh-blog/">Node.js回调函数</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/11/20/my-seventh-blog/" class="archive-article-date">
-  	<time datetime="2019-11-20T07:46:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Node.js<strong>异步编程</strong>的直接体现就是<strong>回调</strong>。</p>
-<p>但<strong>注意区别</strong>：异步编程依托于回调实现，但不能说回调后程序就异步化了。</p>
-<p><strong>回调函数在任务完成后就会被调用</strong>，Node使用了大量的回调函数，Node所有API都支持回调函数</p>
-<p>回调函数一般作为函数的最后一个参数出现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function foo1(name, age, callback)&#123;&#125;</span><br><span class="line">function foo2(value, callback1, callback2)&#123;&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/11/20/my-seventh-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/my-seventh-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-my-sixth-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/my-sixth-blog/">Node.js 创建第一个应用</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/11/20/my-sixth-blog/" class="archive-article-date">
-  	<time datetime="2019-11-20T01:51:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>简单地说，Node.js就是运行在服务端的JavaScript。在使用Node.js创建第一个应用时，首先得安装Node.js。Node.js的安装配置可参考此文档进行：<a href="https://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">https://www.runoob.com/nodejs/nodejs-install-setup.html</a></p>
-<p>在用Node.js创建第一个应用时，我们首先了解一下Node.js应用的几个组成部分：</p>
-<ul>
-<li><strong>引入require模块：</strong>我们可以使用<strong>require指令</strong>来载入Node.js模块</li>
-<li><strong>创建服务器：</strong>服务器可以监听客户端的请求，类似Apache、Nginx等HTTP服务器</li>
-<li><strong>接收请求与响应请求：</strong>服务器很容易创建，客户端可以使用浏览器或终端发送HTTP请求，服务器接收请求后返回响应数据</li>
-</ul>
-        
-          <a class="article-more-a" href="/2019/11/20/my-sixth-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/my-sixth-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-my-fifth-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/15/my-fifth-blog/">作用域是什么</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/11/15/my-fifth-blog/" class="archive-article-date">
-  	<time datetime="2019-11-15T06:43:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="作用域是什么"><a href="#作用域是什么" class="headerlink" title="作用域是什么"></a>作用域是什么</h1><p>作用域是一套<strong>规则</strong>，用于确定<strong>在何处以及如何查找变量(标识符)</strong>。根据<strong>查找的目的</strong>将查询分为<strong>LHS查询和RHS查询</strong>(L、R分表代表Left和Right)</p>
-        
-          <a class="article-more-a" href="/2019/11/15/my-fifth-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">你不知道的JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/15/my-fifth-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-my-forth-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/17/my-forth-blog/">git命令提交代码</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/09/17/my-forth-blog/" class="archive-article-date">
-  	<time datetime="2019-09-17T09:00:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="git命令提交代码的两种情况"><a href="#git命令提交代码的两种情况" class="headerlink" title="git命令提交代码的两种情况"></a>git命令提交代码的两种情况</h1><h2 id="a）直接切到远程分支开发，例如master"><a href="#a）直接切到远程分支开发，例如master" class="headerlink" title="a）直接切到远程分支开发，例如master"></a>a）直接切到远程分支开发，例如master</h2><p>1、提交代码前，首先通过 git status 命令查看修改了哪些文件</p>
-<p>2、两种git add方法，一般都是直接git add . </p>
-<pre><code>git add . 添加所有修改文件
-git add 文件路径 添加自己想要push的文件，适用于提交部分代码</code></pre><p>3、git commit -m ‘description’</p>
-<p>4、git pull</p>
-<p>5、git pull 如果出现其他情况 就输入 :wq</p>
-<p>6、git push</p>
-        
-          <a class="article-more-a" href="/2019/09/17/my-forth-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">github命令</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/17/my-forth-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -1019,8 +415,8 @@ git add 文件路径 添加自己想要push的文件，适用于提交部分代�
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
