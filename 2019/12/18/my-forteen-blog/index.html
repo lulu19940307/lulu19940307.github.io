@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: React | 黄小鹿🦌</title>
+  <title>面向对象高级编程 | 黄小鹿🦌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="黄小鹿🦌">
-<meta property="og:url" content="http://yoursite.com/tags/React/index.html">
+  <meta name="description" content="使用__slots__正常情况下，当我们定义了一个 class，创建了一个 class 的实例后，可以给该实例绑定任何属性和方法，这就是动态语言的灵活性。先定义 class： 12class Student(object):    pass  然后尝试给实例绑定一个属性： 123s=Student()s.name=&amp;apos;huanglulu&amp;apos;print(s.name) # huang">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象高级编程">
+<meta property="og:url" content="http://yoursite.com/2019/12/18/my-forteen-blog/index.html">
 <meta property="og:site_name" content="黄小鹿🦌">
+<meta property="og:description" content="使用__slots__正常情况下，当我们定义了一个 class，创建了一个 class 的实例后，可以给该实例绑定任何属性和方法，这就是动态语言的灵活性。先定义 class： 12class Student(object):    pass  然后尝试给实例绑定一个属性： 123s=Student()s.name=&amp;apos;huanglulu&amp;apos;print(s.name) # huang">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/12/18/my-forteen-blog/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/12/18/my-forteen-blog/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/12/18/my-forteen-blog/3.png">
+<meta property="og:updated_time" content="2019-12-19T01:37:01.162Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="黄小鹿🦌">
+<meta name="twitter:title" content="面向对象高级编程">
+<meta name="twitter:description" content="使用__slots__正常情况下，当我们定义了一个 class，创建了一个 class 的实例后，可以给该实例绑定任何属性和方法，这就是动态语言的灵活性。先定义 class： 12class Student(object):    pass  然后尝试给实例绑定一个属性： 123s=Student()s.name=&amp;apos;huanglulu&amp;apos;print(s.name) # huang">
+<meta name="twitter:image" content="http://yoursite.com/2019/12/18/my-forteen-blog/1.png">
   
     <link rel="alternative" href="/atom.xml" title="黄小鹿🦌" type="application/atom+xml">
   
@@ -150,61 +159,253 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-my-forteen-blog" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/11/22/my-tenth-blog/" class="archive-article-date">
-  	<time datetime="2019-11-22T02:34:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/22/my-tenth-blog/">React的一些核心概念</a>
+    <h1 class="article-title" itemprop="name">
+      面向对象高级编程
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv"  class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+<a href="/2019/12/18/my-forteen-blog/" class="archive-article-date">
+  	<time datetime="2019-12-18T00:40:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="使用-slots"><a href="#使用-slots" class="headerlink" title="使用__slots__"></a>使用<code>__slots__</code></h2><p>正常情况下，当我们定义了一个 class，创建了一个 class 的实例后，可以<strong>给该实例绑定任何属性和方法</strong>，这就是动态语言的灵活性。先定义 class：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p>然后尝试<strong>给实例绑定一个属性</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s=Student()</span><br><span class="line">s.name=&apos;huanglulu&apos;</span><br><span class="line">print(s.name) # huanglulu</span><br></pre></td></tr></table></figure>
+
+<p>还可以<strong>给实例绑定一个方法</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from types import MethodType</span><br><span class="line">def set_age(age):  # 定义一个函数作为实例方法</span><br><span class="line">    self.age = age</span><br><span class="line">s.set_age=MethodType(set_age, s) # 给实例绑定一个方法</span><br><span class="line">s.set_age(25) # 调用实例方法</span><br><span class="line">s.age # 测试结果</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p>但是<strong>注意，给一个实例绑法的方法，对另一个实例是不起作用的</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s2=Student() # 创建新的实例</span><br><span class="line">s2.set_age(37) # 尝试调用方法 报错：AttributeError: &apos;Student&apos; object has no attribute &apos;set_age&apos;</span><br></pre></td></tr></table></figure>
+
+<p>为了给所有实例都绑定方法，可以给 class 绑定方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def set_score(score):</span><br><span class="line">    self.score = score</span><br><span class="line">Student.set_score=set_score</span><br><span class="line">s.set_score(100)</span><br><span class="line">s.score # 100</span><br><span class="line">s2.set_score(88)</span><br><span class="line">s2.score # 88</span><br></pre></td></tr></table></figure>
+
+<p>通常情况下，上面的 set_score 方法可以直接定义在 class 中，但动态绑定允许我们在程序运行的过程中动态地给 class 加上功能，这在静态语言中很难实现。</p>
+<h3 id="使用-slots-1"><a href="#使用-slots-1" class="headerlink" title="使用 __slots__"></a>使用 <code>__slots__</code></h3><p>但是，如果我们想要限制实例的属性怎么办？比如，只允许对 Student 实例添加 name 和 age 属性。</p>
+<p>为了达到限制的目的，Python 在允许定义 class 的时候，<strong>定义特殊的 <code>__slots__</code> 变量，来限制该 class 实例能添加的属性</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    __slots__ = (&apos;name&apos;, &apos;age&apos;) # 用tuple定义允许绑定的属性名称</span><br><span class="line">s = Student() # 创建新的实例</span><br><span class="line">s.name = &apos;huanglulu&apos; # 绑定属性&apos;name&apos;</span><br><span class="line">s.age = 25 # 绑定属性&apos;age&apos;</span><br><span class="line">s.score = 99 # 绑定属性&apos;score&apos; 报错：AttributeError: &apos;Student&apos; object has no attribute &apos;score&apos;</span><br></pre></td></tr></table></figure>
+
+<p>这是因为，<strong>‘score’ 没有被放到 <code>__slots__</code>中，所以不能绑定 score 属性，试图绑定 score 将得到 AttributeError 错误</strong>。使用<code>__slots__</code>要<strong>注意：<code>__slots__</code>定义的属性仅能对当前实例起作用，对继承的子类是不起作用的。</strong>除非在子类中也定义<code>__slots__</code>，这样，子类实例允许定义的属性就是自身的<code>__slots__</code>加上父类的<code>__slots__</code></p>
+<h2 id="使用-property"><a href="#使用-property" class="headerlink" title="使用@property"></a>使用@property</h2><p><strong>Python内置的<code>@property</code>装饰器就是负责把一个方法变成属性调用的</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    @property</span><br><span class="line">    def score(self):</span><br><span class="line">        return self.score</span><br><span class="line">    </span><br><span class="line">    @score.setter</span><br><span class="line">    def score(self, score):</span><br><span class="line">        if not isinstance(score, int):</span><br><span class="line">             raise ValueError(&apos;score must be an integer!&apos;)</span><br><span class="line">        if value &lt; 0 or value &gt; 100:</span><br><span class="line">            raise ValueError(&apos;score must between 0 ~ 100!&apos;) </span><br><span class="line">        self.score = score</span><br><span class="line">s=Student()</span><br><span class="line">s.score=60 # ok，实际转化为s.set_score(60)</span><br><span class="line">s.score # ok,实际上转化为s.get_score()</span><br><span class="line">s.score = 9999 # 报错 ValueError: score must between 0 ~ 100!</span><br></pre></td></tr></table></figure>
+
+<p><code>@property</code>的实现比较复杂，我们先考察如何使用。<strong>把一个 getter 方法变成属性，只需要加上 <code>@property</code>就可以了</strong>，此时，<strong><code>@property</code>本身又创建了一个装饰器 <code>@score.setter</code>，负责把setter方法变成属性赋值</strong>。</p>
+<p>还可以定义只读属性，<strong>只定义 getter 方法，不定义 setter 方法就是一个只读属性</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def birth(self):</span><br><span class="line">        return self._birth</span><br><span class="line"></span><br><span class="line">    @birth.setter</span><br><span class="line">    def birth(self, value):</span><br><span class="line">        self._birth = value</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def age(self):</span><br><span class="line">        return 2015 - self._birth</span><br></pre></td></tr></table></figure>
+
+<p>上面的 <code>birth</code>是<strong>可读写</strong>属性，而<code>age</code>就是一个<strong>只读</strong>属性，因为<code>age</code>可以根据<code>birth</code>计算得到。</p>
+<p>练习：请利用 <code>@property</code>给一个 Screen 对象加上 width 和 height 属性，以及一个只读属性 resolution：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Screen(object):</span><br><span class="line">    @property</span><br><span class="line">    def width(self):</span><br><span class="line">        return self._width</span><br><span class="line"></span><br><span class="line">    @width.setter</span><br><span class="line">    def width(self, value):</span><br><span class="line">        self._width = value</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def height(self):</span><br><span class="line">        return self._height</span><br><span class="line"></span><br><span class="line">    @height.setter</span><br><span class="line">    def height(self, value):</span><br><span class="line">        self._height = value</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def resolution(self):</span><br><span class="line">        return self._width * self._height</span><br></pre></td></tr></table></figure>
+
+<h2 id="多重继承"><a href="#多重继承" class="headerlink" title="多重继承"></a>多重继承</h2><p>继承是面向对象编程的一个重要方式，因为通过继承，子类就可以扩展父类的功能。</p>
+<p>回忆一下 Animal 类层次的设计，假设我们要实现这四种动物：Dog–狗狗，Bat–蝙蝠，Parrot–鹦鹉，Ostrich–鸵鸟。</p>
+<p>如果按照哺乳动物和鸟类归类，那么可以设计出如下的类的层次：<br><img src="/2019/12/18/my-forteen-blog/1.png" alt></p>
+<p>但是如果按照“能跑”和“能飞”来归类，就可以设计出如下的类的层次：<br><img src="/2019/12/18/my-forteen-blog/2.png" alt></p>
+<p>如果要把上面的两种分类都包含进来，就应该设计更多的层次：哺乳类：能跑的哺乳类，能飞的哺乳类；鸟类：能跑的鸟类，能飞的鸟类；这样一来，就得到了如下的类的层次：<br><img src="/2019/12/18/my-forteen-blog/3.png" alt></p>
+<p>如果要再增加“宠物类”和“非宠物类”，这么搞下去，类的数量会呈指数增长，很明显这样设计是不行的。</p>
+<p>正确的做法是采用<strong>多重继承</strong>。首先，主要的类层次仍然按照哺乳类和鸟类设计：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Animal(object):</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line"># 大类：</span><br><span class="line">class Mammal(Animal):</span><br><span class="line">    pass</span><br><span class="line">    </span><br><span class="line">class Bird(Animal):</span><br><span class="line">    pass </span><br><span class="line"></span><br><span class="line"># 各种动物</span><br><span class="line">class Dog(Mammal):</span><br><span class="line">    pass</span><br><span class="line">class Bat(Mammal):</span><br><span class="line">    pass</span><br><span class="line">class Parrot(Bird):</span><br><span class="line">    pass</span><br><span class="line">class Ostrich(Bird):</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p>现在，我们要给动物再加上 Runnable 和 Flyable 的功能，只需要先定义好 Runnable 和 Flyable 的类：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Runnable(object):</span><br><span class="line">    def run(self):</span><br><span class="line">        print(&apos;Running&apos;)</span><br><span class="line"></span><br><span class="line">class Flyable(object):</span><br><span class="line">    def fly(self):</span><br><span class="line">        print(&apos;Flying&apos;)</span><br></pre></td></tr></table></figure>
+
+<p>对于需要 Runnable 功能的动物，就多继承一个 Runnable，例如 Dog：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Dog(Mammal, Runnable):</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p>对于需要 Flyable 功能的动物，就多继承一个 Flyable，例如 Bat：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Bat(Mammal, Flyable):</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p><strong>通过多重继承，一个子类就可以同时获得多个父类的所有功能</strong>。</p>
+<h2 id="使用枚举类"><a href="#使用枚举类" class="headerlink" title="使用枚举类"></a>使用枚举类</h2><p>当我们需要定义常量时，一个办法时用大写变量通过整数来定义，例如月份：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">JAN = 1</span><br><span class="line">FEB = 2</span><br><span class="line">MAR = 3</span><br><span class="line">...</span><br><span class="line">NOV = 11</span><br><span class="line">DEC = 12</span><br></pre></td></tr></table></figure>
+
+<p>好处是简单，缺点是类型是 int，并且仍然是变量。</p>
+<p>更好的办法是<strong>为这样的枚举类型定义一个class类型，然后每个常量是class的一个唯一实例。Python 提供了 <code>Enum</code> 类来实现这个功能</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">from enum import Enum</span><br><span class="line">Month = Enum(&apos;Monthh&apos;, (&apos;Jan&apos;, &apos;Feb&apos;, &apos;Mar&apos;, &apos;Apr&apos;, &apos;May&apos;, &apos;Jun&apos;, &apos;Jul&apos;, &apos;Aug&apos;, &apos;Sep&apos;, &apos;Oct&apos;, &apos;Nov&apos;, &apos;Dec&apos;))</span><br></pre></td></tr></table></figure>
+
+<p>这样我们就获得了 Month 类型的枚举类，可以直接使用 Month.Jan 来引用一个常量，或者枚举它的所有成员：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(Month.Jan) # 引用常量</span><br><span class="line">for name,member in Month.__members__.items():</span><br><span class="line">     print(name, &apos;=&gt;&apos;, member, &apos;,&apos;, member.value) #枚举所有成员,value属性是自动赋给成员的 int 常量，默认从 1 开始计数</span><br></pre></td></tr></table></figure>
+
+<p>上述代码的结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Monthh.Jan</span><br><span class="line">Jan =&gt; Monthh.Jan : 1</span><br><span class="line">Feb =&gt; Monthh.Feb : 2</span><br><span class="line">Mar =&gt; Monthh.Mar : 3</span><br><span class="line">Apr =&gt; Monthh.Apr : 4</span><br><span class="line">May =&gt; Monthh.May : 5</span><br><span class="line">Jun =&gt; Monthh.Jun : 6</span><br><span class="line">Jul =&gt; Monthh.Jul : 7</span><br><span class="line">Aug =&gt; Monthh.Aug : 8</span><br><span class="line">Sep =&gt; Monthh.Sep : 9</span><br><span class="line">Oct =&gt; Monthh.Oct : 10</span><br><span class="line">Nov =&gt; Monthh.Nov : 11</span><br><span class="line">Dec =&gt; Monthh.Dec : 12</span><br></pre></td></tr></table></figure>
+
+<p>如果需要更精确地控制枚举类型，可以<strong>从 Enum 派生出自定义类</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">from enum import Enum,unique</span><br><span class="line"></span><br><span class="line">@unique # @unique装饰器可以帮助我们检查保证没有重复值。</span><br><span class="line">class Weekday(Enum):</span><br><span class="line">    Sun = 0 # Sun的value被设定为0</span><br><span class="line">    Mon = 1</span><br><span class="line">    Tue = 2</span><br><span class="line">    Wed = 3</span><br><span class="line">    Thu = 4</span><br><span class="line">    Fri = 5</span><br><span class="line">    Sat = 6</span><br><span class="line"></span><br><span class="line">day1 = Weekday.Mon</span><br><span class="line">print(day1) # Weekday.Mon</span><br><span class="line">print(Weekday.Tue, Weekday.Tue.value) # Weekday.Tue 2</span><br><span class="line">print(Weekday[&apos;Tue&apos;], Weekday[&apos;Tue&apos;].value) # Weekday.Tue 2</span><br><span class="line"></span><br><span class="line">print(day1 == Weekday.Mon) # True</span><br><span class="line">print(day1 == Weekday.Tue) # False</span><br><span class="line"></span><br><span class="line">print(Weekday(1), day1==Weekday(1)) # Weekday.Mon True</span><br><span class="line"></span><br><span class="line">for name, member in Weekday.__members__.items():</span><br><span class="line">    print(name, &apos;=&gt;&apos;, member, &apos;: &apos;, member.value)</span><br><span class="line"># Sun =&gt; Weekday.Sun :  0</span><br><span class="line"># Mon =&gt; Weekday.Mon :  1</span><br><span class="line"># Tue =&gt; Weekday.Tue :  2</span><br><span class="line"># Wed =&gt; Weekday.Wed :  3</span><br><span class="line"># Thu =&gt; Weekday.Thu :  4</span><br><span class="line"># Fri =&gt; Weekday.Fri :  5</span><br><span class="line"># Sat =&gt; Weekday.Sat :  6</span><br></pre></td></tr></table></figure>
+
+<p>可见，既可以用<strong>成员名称引用枚举常量</strong>，又<strong>可以直接根据value的值获得枚举常量</strong>。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechatpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">React</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/18/my-forteen-blog/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/12/17/my-thirteen-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面向对象编程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -239,9 +440,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
