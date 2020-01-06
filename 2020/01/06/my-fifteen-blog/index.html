@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Python高级特性 | 黄小鹿🦌</title>
+  <title>对象关系映射 | 黄小鹿🦌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="迭代如果给定一个 list 或者 tuple 或者 dict 或者 str 或者 set 或者 generator，可以通过 for 循环来遍历这个 list 或者 tuple ，这种遍历成为迭代（Iteration）。在Python中，迭代是通过 for … in 来实现。 字典 dict 的迭代： 1234567dict=&amp;#123;&amp;apos;name&amp;apos;:&amp;apos;hll&amp;apo">
-<meta name="keywords" content="Python">
+  <meta name="description" content="ORM定义对象关系映射(Object Relational Mapping),它的实质就是将关系数据(库)中的业务数据用对象的形式表示出来，并通过面向对象(Object-Oriented)的方式将这些对象组织起来，实现系统业务逻辑的过程。 在ORM过程中，最重要的概念就是映射(Mapping)，通过这种映射可以做业务对象与数据库分离，从面向对象来说，数据库不应该和业务逻辑绑定在一起，ORM则起到这">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python高级特性">
-<meta property="og:url" content="http://yoursite.com/2019/12/10/my-twelveth-blog/index.html">
+<meta property="og:title" content="对象关系映射">
+<meta property="og:url" content="http://yoursite.com/2020/01/06/my-fifteen-blog/index.html">
 <meta property="og:site_name" content="黄小鹿🦌">
-<meta property="og:description" content="迭代如果给定一个 list 或者 tuple 或者 dict 或者 str 或者 set 或者 generator，可以通过 for 循环来遍历这个 list 或者 tuple ，这种遍历成为迭代（Iteration）。在Python中，迭代是通过 for … in 来实现。 字典 dict 的迭代： 1234567dict=&amp;#123;&amp;apos;name&amp;apos;:&amp;apos;hll&amp;apo">
+<meta property="og:description" content="ORM定义对象关系映射(Object Relational Mapping),它的实质就是将关系数据(库)中的业务数据用对象的形式表示出来，并通过面向对象(Object-Oriented)的方式将这些对象组织起来，实现系统业务逻辑的过程。 在ORM过程中，最重要的概念就是映射(Mapping)，通过这种映射可以做业务对象与数据库分离，从面向对象来说，数据库不应该和业务逻辑绑定在一起，ORM则起到这">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-10T11:37:30.043Z">
+<meta property="og:updated_time" content="2020-01-06T05:55:29.738Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python高级特性">
-<meta name="twitter:description" content="迭代如果给定一个 list 或者 tuple 或者 dict 或者 str 或者 set 或者 generator，可以通过 for 循环来遍历这个 list 或者 tuple ，这种遍历成为迭代（Iteration）。在Python中，迭代是通过 for … in 来实现。 字典 dict 的迭代： 1234567dict=&amp;#123;&amp;apos;name&amp;apos;:&amp;apos;hll&amp;apo">
+<meta name="twitter:title" content="对象关系映射">
+<meta name="twitter:description" content="ORM定义对象关系映射(Object Relational Mapping),它的实质就是将关系数据(库)中的业务数据用对象的形式表示出来，并通过面向对象(Object-Oriented)的方式将这些对象组织起来，实现系统业务逻辑的过程。 在ORM过程中，最重要的概念就是映射(Mapping)，通过这种映射可以做业务对象与数据库分离，从面向对象来说，数据库不应该和业务逻辑绑定在一起，ORM则起到这">
   
     <link rel="alternative" href="/atom.xml" title="黄小鹿🦌" type="application/atom+xml">
   
@@ -155,14 +155,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-my-twelveth-blog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-my-fifteen-blog" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Python高级特性
+      对象关系映射
     </h1>
   
 
@@ -173,53 +173,25 @@
 		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
 	</span>
 
-<a href="/2019/12/10/my-twelveth-blog/" class="archive-article-date">
-  	<time datetime="2019-12-10T10:08:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
+<a href="/2020/01/06/my-fifteen-blog/" class="archive-article-date">
+  	<time datetime="2020-01-06T05:39:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h2><p>如果给定一个 list 或者 tuple 或者 dict 或者 str 或者 set 或者 generator，可以<strong>通过 for 循环来遍历</strong>这个 list 或者 tuple ，这种遍历成为迭代（Iteration）。在Python中，<strong>迭代是通过 for … in 来实现</strong>。</p>
-<p>字典 dict 的迭代：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">dict=&#123;&apos;name&apos;:&apos;hll&apos;,&apos;age&apos;:18&#125;</span><br><span class="line">for key in dict: #默认情况下，dict 迭代的是 key</span><br><span class="line">   print(key)</span><br><span class="line">for value in dict.values(): #此时迭代的是 value</span><br><span class="line">   print(value)</span><br><span class="line">for k,v in dict.items():</span><br><span class="line">   print(k,v) #同时迭代 key 和 value</span><br></pre></td></tr></table></figure>
-
-<p>列表 list 的迭代：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">li = [(1,2),(2,4),(3,9)]</span><br><span class="line">for i in li:</span><br><span class="line">   print(i) #迭代的是列表的元素值 (1,2) (2,4) (3,9)</span><br><span class="line">for i, value in enumerate(li):</span><br><span class="line">   print(i,value) #同时迭代列表的索引和元素本身 0 (1,2) 1 (2,4) 2 (3,9)</span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
-
-<h2 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h2><p>列表生成式即 List Comprehensions，是Python内置的非常简单却强大的可以用来创建list的生成：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[x * x for x in [1,3,4,6]] # [1, 9, 16, 36]</span><br></pre></td></tr></table></figure>
-
-<p>写列表生成式时，把要生成的元素 <strong>x * x</strong>放在前面，后面跟 <strong>for</strong> 循环，就可以把 list 创建出来。</p>
-<p>举例：用列表生成器把一个 list 中所有的字符串变成小写：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">L=[&apos;Hello&apos;,&apos;World&apos;,19,&apos;Apple&apos;,None]</span><br><span class="line">#使用内建的isinstance函数可以判断一个变量是否是字符串</span><br><span class="line">[s.lower() for s in L if isinstance(s,str)]# [&apos;hello&apos;, &apos;world&apos;, &apos;apple&apos;]</span><br></pre></td></tr></table></figure>
-
-<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><p>在Python中，存在着<strong>一边循环一边计算的机制，称为生成器：generator</strong></p>
-<p>要创建一个 generator ，有很多种方法：</p>
-<p>a、只要把一个列表生成器的 [] 改成 () ,就创建了一个generator: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g=(x*x for x in range(10))</span><br></pre></td></tr></table></figure>
-
-<p>创建 L 和 g 的区别仅在于最外层的 [] 和 (), L 是一个 list，而 g 是一个 generator。</p>
-<p>可以通过 <strong>next()</strong> 函数获得generator的下一个返回值</p>
-<p>也可以通过</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for i in g:</span><br><span class="line">   print(i)</span><br></pre></td></tr></table></figure>
-
-<p>循环打印生成器的元素。</p>
-<p>b、如果一个函数定义中包含 <strong>yield</strong> 关键字，那么这个函数就不再是一个普通函数，而是一个 generator 。generator 和函数的执行流程不一样。函数是顺序执行，遇到 <strong>return</strong>  或者最后一行函数语句就返回，而变成 generator 的函数，在每次调用 <strong>next()</strong> 的时候执行，遇到 yield 语句返回，再次执行时从上次返回的 yield 语句处继续执行。</p>
-<h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><p>可以被 <strong>next()</strong> 函数调用并不断返回下一个值的对象称为迭代器：Iterator</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">isinstance((x for x in range(10)), Iterator) # True</span><br><span class="line">isinstance([], Iterator) # False</span><br><span class="line">isinstance(&#123;&#125;, Iterator) # False</span><br><span class="line">isinstance(&apos;abc&apos;, Iterator) # False</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意</strong>：</p>
-<p>a、凡是可作用于 for 循环的对象都是 Iterable 类型(可迭代对象类型)，如list，dict，string，tuple，set，generator</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">isinstance([], Iterable) # True</span><br><span class="line">isinstance(&#123;&#125;, Iterable) # True</span><br><span class="line">isinstance(&apos;abc&apos;, Iterable) # True</span><br><span class="line">isinstance((x for x in range(10)), Iterable) # True</span><br><span class="line">isinstance(100, Iterable) # False</span><br><span class="line">isinstance((1,2),Iterable) # True</span><br></pre></td></tr></table></figure>
-
-<p>b、凡是可作用于 <strong>next()</strong> 函数的对象都是 Iterator 类型，它们表示一个惰性计算的序列，如generator，map函数生成的也是 Iterator</p>
-<p>c、集合数据类型如 list、dict、str 等是 Iterable，但不是 Iterator，不过可以通过 <strong>iter()</strong> 函数获得一个 Iterator 对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">isinstance(iter(&apos;abc&apos;), Iterator) # True</span><br><span class="line">isinstance(iter([]), Iterator) # True</span><br></pre></td></tr></table></figure>
-
+        <h2 id="ORM定义"><a href="#ORM定义" class="headerlink" title="ORM定义"></a>ORM定义</h2><p>对象关系映射(Object Relational Mapping),它的实质就是<strong>将关系数据(库)中的业务数据用对象的形式</strong>表示出来，并通过面向对象(Object-Oriented)的方式将这些对象组织起来，实现系统业务逻辑的过程。</p>
+<p>在ORM过程中，最重要的概念就是映射(Mapping)，通过这种映射可以做业务对象与数据库分离，从面向对象来说，数据库不应该和业务逻辑绑定在一起，ORM则起到这样的分离作用，使数据库层透明，开发人员真正地面向对象。</p>
+<h2 id="ORM优点"><a href="#ORM优点" class="headerlink" title="ORM优点"></a>ORM优点</h2><ul>
+<li>实现了代码与数据操作的节耦合</li>
+<li>不需要自己写原声sql，提高开发效率</li>
+<li>防止sql注入</li>
+</ul>
+<h2 id="ORM缺点"><a href="#ORM缺点" class="headerlink" title="ORM缺点"></a>ORM缺点</h2><ul>
+<li>牺牲性能</li>
+<li>复杂语句力不从心</li>
+</ul>
 
       
 
@@ -264,7 +236,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
@@ -320,7 +292,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/10/my-twelveth-blog/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/06/my-fifteen-blog/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -334,18 +306,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/17/my-thirteen-blog/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/01/06/my-sixteen-blog/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          面向对象编程
+          模型对象的验证
         
       </div>
     </a>
   
   
-    <a href="/2019/12/10/my-eleventh-blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Python函数式编程</div>
+    <a href="/2019/12/18/my-forteen-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面向对象高级编程</div>
       <i class="icon-circle-right"></i>
     </a>
   

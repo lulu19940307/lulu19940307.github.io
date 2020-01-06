@@ -152,6 +152,289 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-my-seventeen-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/06/my-seventeen-blog/">Django中models相关</a>
+    </h1>
+  
+
+        
+        
+<a href="/2020/01/06/my-seventeen-blog/" class="archive-article-date">
+  	<time datetime="2020-01-06T06:10:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ForeignKey"><a href="#ForeignKey" class="headerlink" title="ForeignKey"></a>ForeignKey</h2><p><strong>ForeignKey称为多对一或者一对多或者外键字段</strong>，具体用法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ForeignKey(othermodel, on_delete, **options)</span><br></pre></td></tr></table></figure>
+
+<p>othermodel:</p>
+<ul>
+<li>所关联的模型，“多”model使用外键关联“一”othermodel</li>
+<li>当所关联的模型为他自己时，使用’self’</li>
+<li>当引用的模型为其他app中的模型时，要加上app名称标签：<code>app_name.model_name</code></li>
+<li>数据库会自动在外键字段上创建索引，可以使用<code>de_index=False</code>关闭该功能</li>
+</ul>
+<p>on_delete:</p>
+<ul>
+<li>当删除“一”模型对象时，django会根据该参数的值对与该对象相关的其他对象(也就是“多”)进行操作。默认值为<code>models.CASCADE</code>，这表示级联删除，当删除“一”时，“多”会被删除。</li>
+</ul>
+<p>举例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Article(models.Model):</span><br><span class="line">    author = models.ForeignKey(Author, on_delete=models.CASCADE)</span><br></pre></td></tr></table></figure>
+
+<p>上例中，Article是“多”，Author是“一”。这表明，一篇文章只能有一个作者，一个作者可以有多篇文章。</p>
+<h2 id="ManyToManyField"><a href="#ManyToManyField" class="headerlink" title="ManyToManyField"></a>ManyToManyField</h2><p><strong>ManyToManyField称为多对多字段</strong>，具体用法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ManyToManyField(othermodel, **options)</span><br></pre></td></tr></table></figure>
+
+<p>othermodel:</p>
+<ul>
+<li>所关联的model名称</li>
+</ul>
+<p>举例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Article(models.Model):</span><br><span class="line">    tags = models.ManyToManyField(&apos;Tag&apos;)</span><br></pre></td></tr></table></figure>
+
+<p>上例中，Article是“多”，Tag是“多”。这表明，一篇文章可以有多个标签，一个标签也可以对应多篇文章。</p>
+<h2 id="DateTimeField"><a href="#DateTimeField" class="headerlink" title="DateTimeField"></a>DateTimeField</h2><p>DateTimeField中默认值 auto_now 与 auto_now_add 的用法：</p>
+<ul>
+<li>两者的默认值都是False</li>
+<li>auto_now=True，字段保存时，会自动保存当前时间，但要注意，<strong>每次对实例执行save()的时候，都会将当前时间保存</strong>。也就是不能再手动给它存非当前时间的值。</li>
+<li>auto_now_add=True，字段在实例第一次保存的时候，会保存当前时间，不管你在这里是否对其赋值，但是之后的save()是可以手动赋值的，也就是新实例化一个model，想手动存其他时间，就需要对该实例save()之后赋值然后在save()。</li>
+</ul>
+<p>举例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">create_time = models.DateTimeField(auto_now=True, null=True, blank=True) # 创建时间</span><br><span class="line">update_time = models.DateTimeField(auto_now_add=True, null=True, blank=True) # 更新时间</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Django、Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/06/my-seventeen-blog/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-my-sixteen-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/06/my-sixteen-blog/">模型对象的验证</a>
+    </h1>
+  
+
+        
+        
+<a href="/2020/01/06/my-sixteen-blog/" class="archive-article-date">
+  	<time datetime="2020-01-06T05:58:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>验证一个模型涉及三个步骤：</p>
+<ul>
+<li>验证模型的字段———— Model.clean_fields()</li>
+<li>验证模型的完整性———— Model.clean()</li>
+<li>验证模型的唯一性———— Model.validate_unique()</li>
+</ul>
+<p><strong>当调用模型的 full_clean() 方法时，这三个方法都将执行。(按顺序)</strong></p>
+<p>models.save()执行的时候，是不会自动调用full_clean()来进行校验的。</p>
+<p>在执行save()方法的时候，是不会进行数据校验的，校验应该在save()执行之前完成，你可以先在form进行校验，也可以在model中进行校验。但是，你必须确保，通过这两个校验之后的数据是绝对没有问题的“干净”数据，然后调用save()方法将数据存储入库。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python,Django</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/06/my-sixteen-blog/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-my-fifteen-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/06/my-fifteen-blog/">对象关系映射</a>
+    </h1>
+  
+
+        
+        
+<a href="/2020/01/06/my-fifteen-blog/" class="archive-article-date">
+  	<time datetime="2020-01-06T05:39:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ORM定义"><a href="#ORM定义" class="headerlink" title="ORM定义"></a>ORM定义</h2><p>对象关系映射(Object Relational Mapping),它的实质就是<strong>将关系数据(库)中的业务数据用对象的形式</strong>表示出来，并通过面向对象(Object-Oriented)的方式将这些对象组织起来，实现系统业务逻辑的过程。</p>
+<p>在ORM过程中，最重要的概念就是映射(Mapping)，通过这种映射可以做业务对象与数据库分离，从面向对象来说，数据库不应该和业务逻辑绑定在一起，ORM则起到这样的分离作用，使数据库层透明，开发人员真正地面向对象。</p>
+<h2 id="ORM优点"><a href="#ORM优点" class="headerlink" title="ORM优点"></a>ORM优点</h2><ul>
+<li>实现了代码与数据操作的节耦合</li>
+<li>不需要自己写原声sql，提高开发效率</li>
+<li>防止sql注入</li>
+</ul>
+<h2 id="ORM缺点"><a href="#ORM缺点" class="headerlink" title="ORM缺点"></a>ORM缺点</h2><ul>
+<li>牺牲性能</li>
+<li>复杂语句力不从心</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/06/my-fifteen-blog/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-my-forteen-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -738,250 +1021,6 @@
 
 
   
-    <article id="post-my-seventh-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/my-seventh-blog/">Node.js回调函数</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/11/20/my-seventh-blog/" class="archive-article-date">
-  	<time datetime="2019-11-20T07:46:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Node.js<strong>异步编程</strong>的直接体现就是<strong>回调</strong>。</p>
-<p>但<strong>注意区别</strong>：异步编程依托于回调实现，但不能说回调后程序就异步化了。</p>
-<p><strong>回调函数在任务完成后就会被调用</strong>，Node使用了大量的回调函数，Node所有API都支持回调函数</p>
-<p>回调函数一般作为函数的最后一个参数出现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function foo1(name, age, callback)&#123;&#125;</span><br><span class="line">function foo2(value, callback1, callback2)&#123;&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/11/20/my-seventh-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/my-seventh-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-my-sixth-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/my-sixth-blog/">Node.js 创建第一个应用</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/11/20/my-sixth-blog/" class="archive-article-date">
-  	<time datetime="2019-11-20T01:51:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>简单地说，Node.js就是运行在服务端的JavaScript。在使用Node.js创建第一个应用时，首先得安装Node.js。Node.js的安装配置可参考此文档进行：<a href="https://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">https://www.runoob.com/nodejs/nodejs-install-setup.html</a></p>
-<p>在用Node.js创建第一个应用时，我们首先了解一下Node.js应用的几个组成部分：</p>
-<ul>
-<li><strong>引入require模块：</strong>我们可以使用<strong>require指令</strong>来载入Node.js模块</li>
-<li><strong>创建服务器：</strong>服务器可以监听客户端的请求，类似Apache、Nginx等HTTP服务器</li>
-<li><strong>接收请求与响应请求：</strong>服务器很容易创建，客户端可以使用浏览器或终端发送HTTP请求，服务器接收请求后返回响应数据</li>
-</ul>
-        
-          <a class="article-more-a" href="/2019/11/20/my-sixth-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/my-sixth-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-my-fifth-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/15/my-fifth-blog/">作用域是什么</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/11/15/my-fifth-blog/" class="archive-article-date">
-  	<time datetime="2019-11-15T06:43:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="作用域是什么"><a href="#作用域是什么" class="headerlink" title="作用域是什么"></a>作用域是什么</h1><p>作用域是一套<strong>规则</strong>，用于确定<strong>在何处以及如何查找变量(标识符)</strong>。根据<strong>查找的目的</strong>将查询分为<strong>LHS查询和RHS查询</strong>(L、R分表代表Left和Right)</p>
-        
-          <a class="article-more-a" href="/2019/11/15/my-fifth-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">你不知道的JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/15/my-fifth-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -996,7 +1035,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 黄小鹿🦌
+    		&copy; 2020 黄小鹿🦌
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1091,11 +1130,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">你不知道的JS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">你不知道的JS</a>
+                <a href="javascript:void(0)" class="js-tag color4">Django、Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1108,6 +1155,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python,Django</a>
               </li>
              
               <li class="article-tag-list-item">
